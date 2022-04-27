@@ -77,6 +77,7 @@ static const NSUInteger kMinDaysToEncourageToUpgrade = 3;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *deleteBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *restoreBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *actionsBarButtonItem;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *mintBarBarButtonItem;
 
 @property (nonatomic, strong) NSArray *nodesArray;
 
@@ -630,6 +631,9 @@ static const NSUInteger kMinDaysToEncourageToUpgrade = 3;
             
         case MEGAShareTypeAccessOwner: {
             if (self.displayMode == DisplayModeCloudDrive) {
+                //钱包 - 添加底部Item
+                [self.mintBarBarButtonItem setImage:[UIImage imageNamed:@"mint"]];
+                self.mintBarBarButtonItem.title = @"Mint";
                 [self.toolbar setItems:@[self.downloadBarButtonItem, flexibleItem, self.shareLinkBarButtonItem, flexibleItem, self.moveBarButtonItem, flexibleItem, self.deleteBarButtonItem, flexibleItem, self.actionsBarButtonItem]];
             } else { //Rubbish Bin
                 [self.toolbar setItems:@[self.restoreBarButtonItem, flexibleItem, self.moveBarButtonItem, flexibleItem, self.carbonCopyBarButtonItem, flexibleItem, self.deleteBarButtonItem]];
@@ -651,6 +655,7 @@ static const NSUInteger kMinDaysToEncourageToUpgrade = 3;
     self.deleteBarButtonItem.enabled = boolValue;
     self.restoreBarButtonItem.enabled = boolValue;
     self.actionsBarButtonItem.enabled = boolValue;
+    self.mintBarBarButtonItem.enabled = boolValue;
     
     if ((self.displayMode == DisplayModeRubbishBin) && boolValue) {
         for (MEGANode *n in self.selectedNodesArray) {
@@ -1548,7 +1553,13 @@ static const NSUInteger kMinDaysToEncourageToUpgrade = 3;
             [node mnz_editTextFileInViewController:self];
             break;
         }
-            
+        //钱包
+        case MegaNodeActionTypeMint: {
+            UIViewController *MEGAMintNodeController = [[MEGAMintNodeInterface new] MEGAMintNodeInterfaceView: node];
+            [self presentModalViewController:MEGAMintNodeController animated:YES];
+            break;
+        }
+        //
         case MegaNodeActionTypeDownload:
             [SVProgressHUD showImage:[UIImage imageNamed:@"hudDownload"] status:NSLocalizedString(@"downloadStarted", @"Message shown when a download starts")];
             [TransfersWidgetViewController.sharedTransferViewController bringProgressToFrontKeyWindowIfNeeded];

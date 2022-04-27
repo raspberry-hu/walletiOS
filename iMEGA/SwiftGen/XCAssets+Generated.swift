@@ -712,6 +712,9 @@ internal enum Asset {
       internal static let lockedAccounts = ImageAsset(name: "lockedAccounts")
       internal static let warning = ImageAsset(name: "warning")
     }
+    internal enum Wallet {
+      internal static let mint = ImageAsset(name: "mint")
+    }
     internal enum WarningStorageAlmostFull {
       internal static let blockingDiskFull = ImageAsset(name: "blockingDiskFull")
       internal static let deviceStorageAlmostFull = ImageAsset(name: "deviceStorageAlmostFull")

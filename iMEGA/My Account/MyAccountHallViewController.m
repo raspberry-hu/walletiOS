@@ -31,6 +31,7 @@ typedef NS_ENUM(NSInteger, MyAccount) {
     MyAccountSettings = 0,
     MyAccountContacts,
     MyAccountNotifications,
+    MyAccountWallet,
     MyAccountAchievements,
     MyAccountTransfers,
     MyAccountOffline,
@@ -470,6 +471,15 @@ typedef NS_ENUM(NSInteger, MyAccount) {
             [self.navigationController pushViewController:achievementsVC animated:YES];
             break;
         }
+            
+        //插入
+        case MyAccountWallet: {
+            UIViewController *detailsViewController = [[BoatDetailsInterface new] makeShipDetailsUI:@"Sarita"];
+            detailsViewController.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:detailsViewController animated:YES];
+            break;
+        }
+        //
             
         case MyAccountTransfers: {
             TransfersWidgetViewController *transferVC = [[UIStoryboard storyboardWithName:@"Transfers" bundle:nil] instantiateViewControllerWithIdentifier:@"TransfersWidgetViewControllerID"];

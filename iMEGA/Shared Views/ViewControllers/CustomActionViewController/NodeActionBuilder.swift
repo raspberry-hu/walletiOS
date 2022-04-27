@@ -155,6 +155,7 @@ final class NodeActionBuilder {
     
     private func folderLinkNodeActions() -> [NodeAction] {
         var nodeActions: [NodeAction] = [
+//            .NFTMintAction(),
             .importAction(),
             .downloadAction(),
             .selectAction(),
@@ -268,7 +269,7 @@ final class NodeActionBuilder {
     
     private func readAndWriteAccessLevelNodeActions() -> [NodeAction] {
         var nodeActions: [NodeAction] = []
-
+//        nodeActions.append(NodeAction.NFTMintAction())
         if accessLevel == .accessReadWrite && isEditableTextFile && (displayMode == .cloudDrive || displayMode == .recents || displayMode == .sharedItem) {
             nodeActions.append(NodeAction.textEditorAction())
         }
@@ -296,7 +297,7 @@ final class NodeActionBuilder {
     
     private func fullAccessLevelNodeActions() -> [NodeAction] {
         var nodeActions: [NodeAction] = []
-
+//        nodeActions.append(NodeAction.NFTMintAction())
         if isEditableTextFile && (displayMode == .cloudDrive || displayMode == .recents || displayMode == .sharedItem) {
             nodeActions.append(NodeAction.textEditorAction())
         }
@@ -335,7 +336,7 @@ final class NodeActionBuilder {
     
     private func ownerAccessLevelNodeActions() -> [NodeAction] {
         var nodeActions: [NodeAction] = []
-
+//        nodeActions.append(NodeAction.NFTMintAction())
         switch displayMode {
         case .unknown: break
             
@@ -355,7 +356,8 @@ final class NodeActionBuilder {
             
         @unknown default: break
         }
-        
+        //可以改变插入顺序
+        nodeActions.append(NodeAction.NFTMintAction())
         return nodeActions
     }
     
