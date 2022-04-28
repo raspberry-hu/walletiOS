@@ -15,8 +15,8 @@ class MEGAMintNodeInterface: NSObject, MEGARequestDelegate, ObservableObject {
     private var nodesToExportCount = 1
     let mintModel = MintModel()
     private func updateModel(forNode node: MEGANode) {
-        mintModel.publicLink = node.publicLink ?? "NIL"
-        mintModel.MintName = node.name ?? "NIL"
+        mintModel.publicLink = node.publicLink ?? "nil"
+        mintModel.name = node.name ?? "nil"
     }
     private func exportNode(node: MEGANode){
         MEGASdkManager.sharedMEGASdk().export(node, delegate: MEGAExportRequestDelegate.init(completion: { [self] (request) in
@@ -28,10 +28,8 @@ class MEGAMintNodeInterface: NSObject, MEGARequestDelegate, ObservableObject {
             }, multipleLinks: nodesToExportCount > 1))
     }
     @objc func MEGAMintNodeInterfaceView(_ node: MEGANode) -> UIViewController{
-//        if !node.isExported() {
-            exportNode(node: node)
-            self.mintModel.MintName = node.name ?? "NIL"
-//        }
+        exportNode(node: node)
+        self.mintModel.name = node.name ?? "NIL"
         let details = MEGAMintNode().environmentObject(mintModel)
         return UIHostingController(rootView: details)
     }

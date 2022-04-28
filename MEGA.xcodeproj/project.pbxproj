@@ -1141,6 +1141,20 @@
 		858CE8782819734300BBB993 /* MintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8722819734300BBB993 /* MintModel.swift */; };
 		858CE8792819734300BBB993 /* MintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8722819734300BBB993 /* MintModel.swift */; };
 		858CE88B281974F500BBB993 /* MEGAMintNodeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE88A281974F500BBB993 /* MEGAMintNodeInterface.swift */; };
+		858CE898281A78F000BBB993 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE897281A78F000BBB993 /* UIScreen.swift */; };
+		858CE89A281A792800BBB993 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE899281A792800BBB993 /* ButtonStyle.swift */; };
+		858CE89B281A7AEC00BBB993 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE899281A792800BBB993 /* ButtonStyle.swift */; };
+		858CE89C281A7AED00BBB993 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE899281A792800BBB993 /* ButtonStyle.swift */; };
+		858CE89D281A7AEE00BBB993 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE899281A792800BBB993 /* ButtonStyle.swift */; };
+		858CE89E281A7AEE00BBB993 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE899281A792800BBB993 /* ButtonStyle.swift */; };
+		858CE89F281A7AF400BBB993 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE899281A792800BBB993 /* ButtonStyle.swift */; };
+		858CE8A0281A7AF500BBB993 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE899281A792800BBB993 /* ButtonStyle.swift */; };
+		858CE8A1281A7B3200BBB993 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE897281A78F000BBB993 /* UIScreen.swift */; };
+		858CE8A2281A7B3400BBB993 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE897281A78F000BBB993 /* UIScreen.swift */; };
+		858CE8A3281A7B3500BBB993 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE897281A78F000BBB993 /* UIScreen.swift */; };
+		858CE8A4281A7B3600BBB993 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE897281A78F000BBB993 /* UIScreen.swift */; };
+		858CE8A5281A7B3700BBB993 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE897281A78F000BBB993 /* UIScreen.swift */; };
+		858CE8A6281A7B3700BBB993 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE897281A78F000BBB993 /* UIScreen.swift */; };
 		9411354F1F00FD1500D33428 /* Cloud.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415226691A692ECC00EC7BB6 /* Cloud.storyboard */; };
 		941135501F00FFAB00D33428 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AB8EC01A7103B300E40A39 /* BrowserViewController.m */; };
 		941135521F00FFE400D33428 /* MEGAReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418072791AA5BBA00078D950 /* MEGAReachabilityManager.m */; };
@@ -3543,6 +3557,8 @@
 		858CE86A2819730F00BBB993 /* MEGAMintNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEGAMintNode.swift; sourceTree = "<group>"; };
 		858CE8722819734300BBB993 /* MintModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintModel.swift; sourceTree = "<group>"; };
 		858CE88A281974F500BBB993 /* MEGAMintNodeInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEGAMintNodeInterface.swift; sourceTree = "<group>"; };
+		858CE897281A78F000BBB993 /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
+		858CE899281A792800BBB993 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		9419B6C51F20DC5700FEBE31 /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
 		942254DC1EDC03130074C51A /* MEGAPicker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MEGAPicker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		942254EB1EDC03140074C51A /* MEGAPickerFileProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MEGAPickerFileProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -8117,11 +8133,12 @@
 		858CE78E28193E1300BBB993 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				858CE896281A78E000BBB993 /* Util */,
+				858CE7AD28193E1400BBB993 /* walletView.swift */,
 				858CE78F28193E1400BBB993 /* walletInterface.swift */,
 				858CE79028193E1400BBB993 /* walletSet */,
 				858CE7A828193E1400BBB993 /* NFTAsset */,
 				858CE7AB28193E1400BBB993 /* NFTMarket */,
-				858CE7AD28193E1400BBB993 /* walletView.swift */,
 				858CE7B028193E1400BBB993 /* DSCDrive */,
 			);
 			path = Wallet;
@@ -8167,6 +8184,15 @@
 				858CE88A281974F500BBB993 /* MEGAMintNodeInterface.swift */,
 			);
 			path = Mint;
+			sourceTree = "<group>";
+		};
+		858CE896281A78E000BBB993 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				858CE897281A78F000BBB993 /* UIScreen.swift */,
+				858CE899281A792800BBB993 /* ButtonStyle.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		9419B6BD1F20D18300FEBE31 /* Spotlight */ = {
@@ -12196,6 +12222,7 @@
 				5BB68CA120359B5400B03C00 /* PasswordStrengthIndicatorView.m in Sources */,
 				B662B86524ED0D800089376A /* VerificationCodeViewModel.swift in Sources */,
 				BF69E5172374F3720031913D /* AppDelegate+Additions.swift in Sources */,
+				858CE898281A78F000BBB993 /* UIScreen.swift in Sources */,
 				C4CBDD82256EDD1200835CF5 /* PlayerCurrentStateEntity.swift in Sources */,
 				5D9DC3E1253EB9230055F4C4 /* UnitDataStorage.swift in Sources */,
 				8315F20C22C2202400EA40CC /* ContactsOnMegaManager.swift in Sources */,
@@ -12783,6 +12810,7 @@
 				BFC933E224A453B400BC2A75 /* EmojiReactionCollectionCell.swift in Sources */,
 				B6D7FB1A2762A534003D9570 /* PhotoCardViewModel.swift in Sources */,
 				B65AC8E421F9B7A30094FF4F /* MOAssetUploadErrorPerLogin+CoreDataProperties.m in Sources */,
+				858CE89A281A792800BBB993 /* ButtonStyle.swift in Sources */,
 				1246682D275DBE0500C94335 /* CreateTextFileAlertViewRouter.swift in Sources */,
 				83B0B45F242CC21800468191 /* ChatSharedItemsViewController.swift in Sources */,
 				5D166B82252197ED004F4F4A /* NodeActionViewControllerGenericDelegate.swift in Sources */,
@@ -13032,11 +13060,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				858CE86F2819730F00BBB993 /* MEGAMintNode.swift in Sources */,
+				858CE89E281A7AEE00BBB993 /* ButtonStyle.swift in Sources */,
 				7794AEDF231E54120039C1D2 /* MEGASdkManager.m in Sources */,
 				774941E02410EAE000FC5CB6 /* MOMediaDestination+CoreDataClass.m in Sources */,
 				858CE83B28193E1500BBB993 /* NFTAssetView.swift in Sources */,
 				774941E32410EAFB00FC5CB6 /* MOOfflineFolderLayout+CoreDataClass.m in Sources */,
 				774941DB240FF69800FC5CB6 /* MEGAStore.m in Sources */,
+				858CE8A4281A7B3600BBB993 /* UIScreen.swift in Sources */,
 				858CE85028193E1500BBB993 /* walletView.swift in Sources */,
 				858CE8772819734300BBB993 /* MintModel.swift in Sources */,
 				B699016F262F91D200176FFC /* UncaughtExceptionHandler.swift in Sources */,
@@ -13091,6 +13121,7 @@
 				835EE3B32582430700D8E3B8 /* MEGASdkManager.m in Sources */,
 				A82D5CE526BC086E00E73D27 /* CredentialRepository.swift in Sources */,
 				830C28BB25E68FA700E9B56E /* QuickAccessWidgetView.swift in Sources */,
+				858CE8A5281A7B3700BBB993 /* UIScreen.swift in Sources */,
 				83E3464E25B6E0BC006F2AD6 /* OfflineFilesRepositoryProtocol.swift in Sources */,
 				83655B292593A1D1001A0846 /* OfflineFilesUseCase.swift in Sources */,
 				83344F58258A1C780052DB3C /* AuthRepository.swift in Sources */,
@@ -13147,6 +13178,7 @@
 				83655A8325938499001A0846 /* MOMessage+CoreDataProperties.m in Sources */,
 				83E3454E25B58DDC006F2AD6 /* QuickAccessWidgetRecentItem+CoreDataClass.swift in Sources */,
 				8361086325AF156800CAC6E1 /* MEGALogger.m in Sources */,
+				858CE89F281A7AF400BBB993 /* ButtonStyle.swift in Sources */,
 				83E3454F25B58DDC006F2AD6 /* QuickAccessWidgetRecentItem+CoreDataProperties.swift in Sources */,
 				858CE8702819730F00BBB993 /* MEGAMintNode.swift in Sources */,
 				83655AC32593855F001A0846 /* MOUploadTransfer+CoreDataClass.m in Sources */,
@@ -13188,9 +13220,11 @@
 				B53BDBED27619173001D73F8 /* XCAssets+Generated.swift in Sources */,
 				83345230258CA2E00052DB3C /* ShortcutIntents.intentdefinition in Sources */,
 				831B4911256FED6F0086002B /* IntentHandler.swift in Sources */,
+				858CE8A0281A7AF500BBB993 /* ButtonStyle.swift in Sources */,
 				858CE85228193E1500BBB993 /* walletView.swift in Sources */,
 				B5300AF72754A0AA001E516B /* Strings+Generated.swift in Sources */,
 				858CE7CD28193E1400BBB993 /* walletSetView.swift in Sources */,
+				858CE8A6281A7B3700BBB993 /* UIScreen.swift in Sources */,
 				831B497C256FF2580086002B /* ShortcutDetail.swift in Sources */,
 				858CE7B828193E1400BBB993 /* walletInterface.swift in Sources */,
 				858CE83D28193E1500BBB993 /* NFTAssetView.swift in Sources */,
@@ -13275,6 +13309,7 @@
 				B695B600264B43160050DF09 /* SVRadialGradientLayer.m in Sources */,
 				C46517B1272C9FBC004F27A0 /* NodeTypeEntity+Mapper.swift in Sources */,
 				C46517B3272C9FE2004F27A0 /* MEGANodeLabel+Mapper.swift in Sources */,
+				858CE8A1281A7B3200BBB993 /* UIScreen.swift in Sources */,
 				943229501EDD9CF8007DB542 /* UIImage+MNZCategory.m in Sources */,
 				831D61A7218738EB0038F5B8 /* MOFolderLayout+CoreDataClass.m in Sources */,
 				5BE689B52419188D00462134 /* CloudAppearancePreference+CoreDataProperties.swift in Sources */,
@@ -13329,6 +13364,7 @@
 				BF08AA0025CA28AD009DE3D2 /* MEGANode+FilePath.swift in Sources */,
 				B5300AF02754A097001E516B /* Strings+Generated.swift in Sources */,
 				A8F0A1DA2178B41900575C57 /* MOMessage+CoreDataClass.m in Sources */,
+				858CE89B281A7AEC00BBB993 /* ButtonStyle.swift in Sources */,
 				C46517A3272C9DC8004F27A0 /* MEGANodeList+Mapper.swift in Sources */,
 				858CE83828193E1500BBB993 /* NFTAssetView.swift in Sources */,
 				9432294C1EDD9CE9007DB542 /* NSFileManager+MNZCategory.m in Sources */,
@@ -13354,11 +13390,13 @@
 				858CE86D2819730F00BBB993 /* MEGAMintNode.swift in Sources */,
 				77F3C30621C15A5B0049A1BA /* NSFileManager+MNZCategory.m in Sources */,
 				B53BDBEA27619170001D73F8 /* XCAssets+Generated.swift in Sources */,
+				858CE89C281A7AED00BBB993 /* ButtonStyle.swift in Sources */,
 				942255041EDC04080074C51A /* FileProvider.m in Sources */,
 				B5925B8B279119E400170CD6 /* Colors+Generated.swift in Sources */,
 				0DE3037826B25AA100E4A66B /* FileProviderItem.swift in Sources */,
 				942ED2AF1EDEE51600C9908D /* MEGASdkManager.m in Sources */,
 				858CE7B428193E1400BBB993 /* walletInterface.swift in Sources */,
+				858CE8A2281A7B3400BBB993 /* UIScreen.swift in Sources */,
 				7747B2DA208625B60011814E /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -13404,6 +13442,7 @@
 				A860C81126BBEA17004BFD23 /* ReinstallationUseCase.swift in Sources */,
 				C43817B52746924300EA82A8 /* MEGALabel.swift in Sources */,
 				BFFED4A226F944F400B9EBEC /* PreferenceKeyEntity.swift in Sources */,
+				858CE89D281A7AEE00BBB993 /* ButtonStyle.swift in Sources */,
 				773DF39C20EF6902004C3418 /* MEGACopyRequestDelegate.m in Sources */,
 				C46517AC272C9E65004F27A0 /* NodeTypeEntity.swift in Sources */,
 				777AC33F21AD420F00E987A4 /* MEGAChatAttachVoiceClipRequestDelegate.m in Sources */,
@@ -13421,6 +13460,7 @@
 				5B79E88F26E6973A0070D782 /* EmptyStateType.swift in Sources */,
 				A8F515B127F7548A00AEE4D6 /* ShareViewController+LoginRequiredView.swift in Sources */,
 				831D61A8218738EC0038F5B8 /* MOFolderLayout+CoreDataClass.m in Sources */,
+				858CE8A3281A7B3500BBB993 /* UIScreen.swift in Sources */,
 				BF5C36792491C917004DDA2F /* MEGAUser+Additions.swift in Sources */,
 				C46517A8272C9E32004F27A0 /* NodeEntity.swift in Sources */,
 				83FF502F247E86CD00EAC08B /* CustomModalAlertViewController.m in Sources */,
