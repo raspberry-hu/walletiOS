@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftUI
+import web3swift
 @objc
 class BoatDetailsInterface: NSObject {
     

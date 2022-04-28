@@ -713,6 +713,10 @@ internal enum Asset {
       internal static let warning = ImageAsset(name: "warning")
     }
     internal enum Wallet {
+      internal static let walletAddress = ImageAsset(name: "WalletAddress")
+      internal static let walletCreate = ImageAsset(name: "WalletCreate")
+      internal static let walletImport = ImageAsset(name: "WalletImport")
+      internal static let iconWallet = ImageAsset(name: "icon-wallet")
       internal static let mint = ImageAsset(name: "mint")
     }
     internal enum WarningStorageAlmostFull {

@@ -354,7 +354,24 @@ typedef NS_ENUM(NSInteger, MyAccount) {
             cell.pendingLabel.text = nil;
             break;
         }
-            
+        //wallet
+        case MyAccountWallet: {
+            cell.sectionLabel.text = @"wallet";
+            cell.iconImageView.image = [UIImage imageNamed:@"icon-wallet"].imageFlippedForRightToLeftLayoutDirection;
+            NSUInteger unseenUserAlerts = [MEGASdkManager sharedMEGASdk].userAlertList.mnz_relevantUnseenCount;
+            if (unseenUserAlerts == 0) {
+                cell.pendingView.hidden = YES;
+                cell.pendingLabel.text = nil;
+            } else {
+                if (cell.pendingView.hidden) {
+                    cell.pendingView.hidden = NO;
+                    cell.pendingView.clipsToBounds = YES;
+                }
+                cell.pendingLabel.text = [NSString stringWithFormat:@"%tu", unseenUserAlerts];
+            }
+            break;
+        }
+        //
         case MyAccountNotifications: {
             cell.sectionLabel.text = NSLocalizedString(@"notifications", nil);
             cell.iconImageView.image = [UIImage imageNamed:@"icon-notifications"].imageFlippedForRightToLeftLayoutDirection;

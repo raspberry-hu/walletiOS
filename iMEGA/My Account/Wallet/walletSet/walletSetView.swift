@@ -10,13 +10,30 @@ import SwiftUI
 import UIKit
 
 struct walletSetView: View {
-//    @State private var username: String = ""
     var body: some View {
-        VStack {
-//            TextField("合约地址",text: $username)
-//            Text(username)
-            Text("1")
-        }
+            List {
+                NavigationLink(destination: walletCreateView()) {
+                    Image("WalletCreate")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                    Text("Create Wallet")
+                }
+                .frame(height: 45)
+                NavigationLink(destination: walletImportView()) {
+                    Image("WalletImport")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                    Text("Import Wallet")
+                }
+                .frame(height: 45)
+                NavigationLink(destination: walletManageView()) {
+                    Image("WalletAddress")
+                        .resizable()
+                        .frame(width: 20, height: 15)
+                    Text("Manage Wallet")
+                }
+                .frame(height: 45)
+            }
     }
 }
 
