@@ -30,14 +30,14 @@ public enum Currency: String, CaseIterable, Codable {
         }
     }
 
-    var logo: some View {
-        Image(self.rawValue.lowercased())
-            .resizable()
-            .scaledToFit()
-            .frame(width: 28, height: 28)
-            .background(Color.background)
-            .clipShape(Circle())
-    }
+//    var logo: some View {
+//        Image(self.rawValue.lowercased())
+//            .resizable()
+//            .scaledToFit()
+//            .frame(width: 28, height: 28)
+//            .background(Color.background)
+//            .clipShape(Circle())
+//    }
 }
 
 struct TickerData: Codable {
