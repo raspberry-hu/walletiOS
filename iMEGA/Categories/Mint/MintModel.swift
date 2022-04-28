@@ -9,6 +9,11 @@
 import Foundation
 
 class MintModel: ObservableObject {
-    @Published var publicLink = "nil"
-    @Published var MintName = "nil"
+    @Published var publicLink = ""
+    @Published var MintName = ""
+    @Published var Mintdescription = ""
+    @Published var externalLink = ""
+    @Published var chain = ["Ethereum", "Rinkeby", "Polygon"]
+    @Published var selectedChain: Int = 0
+    @Published var Name = ""
 }
