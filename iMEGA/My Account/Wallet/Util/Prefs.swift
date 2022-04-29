@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Defaults
 
 extension Defaults.Keys {
     public static let cryptoPublicKey = Defaults.Key<String>("cryptoPublicKey", default: "")
@@ -18,6 +19,8 @@ extension Defaults.Keys {
     public static let walletIntroSeen = Defaults.BoolKey("seenWalletIntro")
     public static let walletOnboardingDone = Defaults.BoolKey("walletOnboardingDone")
     public static let currentTheme = Defaults.Key<String>("currentTheme", default: "")
+    public static let walletName = Defaults.Key<[String]>(
+        "walletName", default: [])
 }
 extension Defaults {
     static func BoolKey(

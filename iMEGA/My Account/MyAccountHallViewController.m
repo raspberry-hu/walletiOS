@@ -491,7 +491,7 @@ typedef NS_ENUM(NSInteger, MyAccount) {
             
         //插入
         case MyAccountWallet: {
-            UIViewController *detailsViewController = [[BoatDetailsInterface new] makeShipDetailsUI:@"Sarita"];
+            UIViewController *detailsViewController = [[WalletRootInterface new] makeWalletRootViewUI];
             detailsViewController.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:detailsViewController animated:YES];
             break;

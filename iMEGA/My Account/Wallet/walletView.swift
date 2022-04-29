@@ -8,9 +8,8 @@
 
 import SwiftUI
 
-struct BoatDetailsView: View {
-//    @StateObject var vm = CoreDataManager.shared
-    var shipName = ""
+struct WalletRootView: View {
+    @EnvironmentObject var web3Model: Web3Model
     var body: some View {
         TabView {
             NFTAssetView()
