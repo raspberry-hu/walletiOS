@@ -10,9 +10,10 @@ import SwiftUI
 import UIKit
 
 struct walletSetView: View {
+    @EnvironmentObject var web3Model: Web3Model
     var body: some View {
             List {
-                NavigationLink(destination: walletCreateView()) {
+                NavigationLink(destination: walletCreateView().environmentObject(web3Model)) {
                     Image("WalletCreate")
                         .resizable()
                         .frame(width: 20, height: 20)

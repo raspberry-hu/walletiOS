@@ -19,8 +19,8 @@ extension Defaults.Keys {
     public static let walletIntroSeen = Defaults.BoolKey("seenWalletIntro")
     public static let walletOnboardingDone = Defaults.BoolKey("walletOnboardingDone")
     public static let currentTheme = Defaults.Key<String>("currentTheme", default: "")
-    public static let walletName = Defaults.Key<[String]>(
-        "walletName", default: [])
+    public static let walletName = Defaults.Key<[String]>("walletName", default: [])
+    public static let walletPassword = Defaults.Key<[String]>("walletPassword", default: [])
 }
 extension Defaults {
     static func BoolKey(

@@ -27,7 +27,7 @@ struct WalletRootView: View {
                     Image(systemName: "externaldrive.badge.icloud")
                     Text("DSC网盘")
                 }
-            walletSetView()
+            walletSetView().environmentObject(web3Model)
                 .tabItem {
                     Image(systemName: "gear")
                     Text("设置")

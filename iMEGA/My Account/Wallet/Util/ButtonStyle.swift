@@ -19,3 +19,15 @@ struct MintButtonStyle: ButtonStyle {
       .cornerRadius(8.0)
   }
 }
+
+struct textFieldModify: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
+            .frame(width: UIScreen.screenWidth * 0.9, height: UIScreen.screenWidth * 0.07)
+            .foregroundColor(Color("MegaWalletCreateColorGrid"))
+            .overlay(RoundedRectangle(cornerRadius: 8, style: .continuous)
+                        .stroke(Color("MegaWalletCreateColorGrid"), lineWidth: 1))
+            .background(Color("MegaWalletCreateColorLightGreen"))
+    }
+}

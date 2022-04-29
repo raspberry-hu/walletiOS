@@ -17,12 +17,12 @@ class WalletDetailsModel: ObservableObject {
 }
 
 class Web3Model: ObservableObject {
-    var walletDetailsModel: WalletDetailsModel = WalletDetailsModel()
+    @Published var walletDetailsModel: WalletDetailsModel = WalletDetailsModel()
 }
 
 extension Web3Model {
     func store() {
         Defaults[.walletName].append(self.walletDetailsModel.walletName)
-        print(Defaults[.walletName][0])
+        Defaults[.walletPassword].append(self.walletDetailsModel.walletPassword)
     }
 }
