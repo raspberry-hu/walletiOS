@@ -39,10 +39,10 @@ struct walletCreateView: View {
                     .cornerRadius(10)
             }
             .alert(isPresented: $showingPasswordAlert) {
-                Alert(title: Text("Create Fail"), message: Text("put in same password"), dismissButton: .default(Text("OK")))
+                Alert(title: Text("MegaWallet"), message: Text("Create Fail"), dismissButton: .default(Text("OK")))
             }
             .alert(isPresented: $isCreatingWallet) {
-                Alert(title: Text("Create Success"), message: Text("put in same password"), dismissButton: .default(Text("OK")))
+                Alert(title: Text("MegaWallet"), message: Text("Create Success"), dismissButton: .default(Text("OK")))
             }
             Button {
                 web3Model.clear()

@@ -12,7 +12,7 @@ struct NFTAssetView: View {
     var body: some View {
         VStack {
 //            ResponderViewController()
-            Text("1")
+            Text("NFTAsset")
         }
     }
 }

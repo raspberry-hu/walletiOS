@@ -15,22 +15,22 @@ struct WalletRootView: View {
             NFTAssetView()
                 .tabItem {
                     Image(systemName: "bitcoinsign.square")
-                    Text("资产")
+                    Text("NFT Asset")
                 }
             NFTMarketView()
                 .tabItem {
                     Image(systemName: "cart")
-                    Text("NFT市场")
+                    Text("NFT Wallet")
                 }
             DSCDriveView()
                 .tabItem {
                     Image(systemName: "externaldrive.badge.icloud")
-                    Text("DSC网盘")
+                    Text("DSC Drive")
                 }
             walletSetView().environmentObject(web3Model)
                 .tabItem {
                     Image(systemName: "gear")
-                    Text("设置")
+                    Text("Wallet Set")
                 }
         }
         .font(.headline)

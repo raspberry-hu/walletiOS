@@ -14,26 +14,30 @@ struct walletManageView: View {
     @State private var walletShowMnemonics = false
     @State private var walletSelectedAddress = ""
     var body: some View {
-        VStack(alignment: .leading, spacing: 2) {
-            Text("wallet Address")
-                .padding(.leading, 20)
-                .padding(.top,20)
-                .font(.system(size: 25, weight: .bold, design: .default))
-            RadioButtonGroup(selectedId: Defaults[.walletNowAddress]){ selected in
-                print("Selected is: \(selected)")
-                walletSelectedAddress = selected
-            }.environmentObject(walletmanage)
+        VStack(alignment: .leading,spacing: 15) {
+            VStack(alignment: .leading, spacing: 2) {
+                Text("wallet Address")
+                    .padding(.leading, 20)
+                    .padding(.top, 20)
+                    .font(.system(size: 25, weight: .bold, design: .default))
+                RadioButtonGroup(selectedId: Defaults[.walletNowAddress]){ selected in
+                    print("Selected is: \(selected)")
+                    walletSelectedAddress = selected
+                    Defaults[.walletNowAddress] = selected
+                }.environmentObject(walletmanage)
+            }
             Button {
                 self.walletShowMnemonics = true
             } label: {
-                Text("Import Wallet")
+                Text("Show SecretPhase")
                     .frame(width: UIScreen.screenWidth * 0.9 , height: UIScreen.screenWidth * 0.1, alignment: .center)
                     .foregroundColor(.white)
                     .background(Color("00C29A"))
                     .cornerRadius(10)
+                    .padding(.leading, UIScreen.screenWidth * 0.05)
             }
             .alert(isPresented: $walletShowMnemonics) {
-                Alert(title: Text("MegaWallet"), message: Text("\(MEGAWalletConstants.cryptoKeychain[string: "secretPhrase\(self.walletSelectedAddress)"] ?? "No secretPhase")"), dismissButton: .default(Text("OK")))
+                Alert(title: Text("MegaWallet"), message: Text("\(MEGAWalletConstants.cryptoKeychain[string: "secretPhrase\(Defaults[.walletNowAddress])"] ?? "No secretPhase")"), dismissButton: .default(Text("OK")))
             }
             Spacer()
         }

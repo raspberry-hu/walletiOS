@@ -16,5 +16,5 @@ public struct MEGAWalletConstants {
 //    public static let appGroup = "group.mega.ios"
 //    public static let keychain = Keychain(service: "MEGAWallet", accessGroup: appGroup)
     public static let cryptoKeychain = Keychain(service: "MEGAWallet")
-        .accessibility(.whenUnlockedThisDeviceOnly)
+        .accessibility(.whenPasscodeSetThisDeviceOnly)
 }

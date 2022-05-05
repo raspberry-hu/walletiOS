@@ -1150,6 +1150,7 @@
 		858CE8D4281AD58900BBB993 /* CryptoConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8D3281AD58900BBB993 /* CryptoConfig.swift */; };
 		858CE8D6281AD83A00BBB993 /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8D5281AD83A00BBB993 /* TokenType.swift */; };
 		858CE8D8281AD8AA00BBB993 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8D7281AD8AA00BBB993 /* Prefs.swift */; };
+		85988A772823B62C00516F1C /* NetworkJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85988A762823B62C00516F1C /* NetworkJSONDecoder.swift */; };
 		9411354F1F00FD1500D33428 /* Cloud.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415226691A692ECC00EC7BB6 /* Cloud.storyboard */; };
 		941135501F00FFAB00D33428 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AB8EC01A7103B300E40A39 /* BrowserViewController.m */; };
 		941135521F00FFE400D33428 /* MEGAReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418072791AA5BBA00078D950 /* MEGAReachabilityManager.m */; };
@@ -3565,6 +3566,7 @@
 		858CE8D3281AD58900BBB993 /* CryptoConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoConfig.swift; sourceTree = "<group>"; };
 		858CE8D5281AD83A00BBB993 /* TokenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenType.swift; sourceTree = "<group>"; };
 		858CE8D7281AD8AA00BBB993 /* Prefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
+		85988A762823B62C00516F1C /* NetworkJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkJSONDecoder.swift; sourceTree = "<group>"; };
 		9419B6C51F20DC5700FEBE31 /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
 		942254DC1EDC03130074C51A /* MEGAPicker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MEGAPicker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		942254EB1EDC03140074C51A /* MEGAPickerFileProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MEGAPickerFileProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -8210,6 +8212,7 @@
 				125AD4E2281B70BB004EF446 /* MEGAWalletConstants.swift */,
 				125AD4E6281B7327004EF446 /* AppInfo.swift */,
 				12E75C5A2822329C0032DEFB /* TextView.swift */,
+				85988A762823B62C00516F1C /* NetworkJSONDecoder.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -12172,6 +12175,7 @@
 				B6730B1E2738482600A9CF5F /* MEGAFileTypes.swift in Sources */,
 				BFAC874C25FEF75F009CA3F6 /* AudioSessionRepositoryProtocol.swift in Sources */,
 				BF782D60269BA4BB0001D169 /* CameraPositionEntity.swift in Sources */,
+				85988A772823B62C00516F1C /* NetworkJSONDecoder.swift in Sources */,
 				5D1B240124AF5F4400ACE1C5 /* ParagraphStyleFactory.swift in Sources */,
 				BF7D43B4253CFF6F003DF1DA /* SDKNodesUpdateListenerRepository.swift in Sources */,
 				5B51E2E124597A39009379BA /* MOUser+CoreDataProperties.m in Sources */,
