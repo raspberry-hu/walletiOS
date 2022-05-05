@@ -8,6 +8,7 @@
 
 import Foundation
 import Defaults
+import SwiftUI
 
 extension Defaults.Keys {
     public static let cryptoPublicKey = Defaults.Key<String>("cryptoPublicKey", default: "")
@@ -21,6 +22,8 @@ extension Defaults.Keys {
     public static let currentTheme = Defaults.Key<String>("currentTheme", default: "")
     public static let walletName = Defaults.Key<[String]>("walletName", default: [])
     public static let walletPassword = Defaults.Key<[String]>("walletPassword", default: [])
+    public static let walletAddress = Defaults.Key<[String]>("walletAddress", default: [])
+    public static let walletNowAddress = Defaults.Key<String>("walletNowAddress", default: "")
 }
 extension Defaults {
     static func BoolKey(

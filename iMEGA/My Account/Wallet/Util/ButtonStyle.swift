@@ -25,9 +25,8 @@ struct textFieldModify: ViewModifier {
         content
             .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
             .frame(width: UIScreen.screenWidth * 0.9, height: UIScreen.screenWidth * 0.07)
-            .foregroundColor(Color("MegaWalletCreateColorGrid"))
+            .foregroundColor(.black)
             .overlay(RoundedRectangle(cornerRadius: 8, style: .continuous)
-                        .stroke(Color("MegaWalletCreateColorGrid"), lineWidth: 1))
-            .background(Color("MegaWalletCreateColorLightGreen"))
+                .stroke(.gray, lineWidth: 1))
     }
 }

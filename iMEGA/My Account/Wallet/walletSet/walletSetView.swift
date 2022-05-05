@@ -13,14 +13,14 @@ struct walletSetView: View {
     @EnvironmentObject var web3Model: Web3Model
     var body: some View {
             List {
-                NavigationLink(destination: walletCreateView().environmentObject(web3Model)) {
+                NavigationLink(destination: walletCreateView(completion: self.walletCreate).environmentObject(web3Model)) {
                     Image("WalletCreate")
                         .resizable()
                         .frame(width: 20, height: 20)
                     Text("Create Wallet")
                 }
                 .frame(height: 45)
-                NavigationLink(destination: walletImportView()) {
+                NavigationLink(destination: walletImportView(completion: self.walletImport).environmentObject(web3Model)) {
                     Image("WalletImport")
                         .resizable()
                         .frame(width: 20, height: 20)
@@ -35,6 +35,12 @@ struct walletSetView: View {
                 }
                 .frame(height: 45)
             }
+    }
+    private func walletCreate() -> () {
+        print("wallet create")
+    }
+    private func walletImport() -> () {
+        print("wallet import")
     }
 }
 

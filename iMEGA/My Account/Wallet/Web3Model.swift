@@ -25,4 +25,7 @@ extension Web3Model {
         Defaults[.walletName].append(self.walletDetailsModel.walletName)
         Defaults[.walletPassword].append(self.walletDetailsModel.walletPassword)
     }
+    func clear() {
+        Defaults[.walletAddress].removeAll()
+    }
 }

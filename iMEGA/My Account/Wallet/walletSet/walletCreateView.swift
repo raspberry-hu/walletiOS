@@ -9,28 +9,49 @@
 import SwiftUI
 
 struct walletCreateView: View {
+    let completion: () -> Void
+    let model = OnboardingModel()
     @EnvironmentObject var web3Model: Web3Model
     @State var textPasswordVerify: String = ""
-    @State private var showingPasswordAlert = false
+    @State var showingPasswordAlert = false
+    @State var isCreatingWallet = false
     var body: some View {
         VStack(alignment: .leading,spacing: 15){
             ZStack(alignment: .leading) {
-                Text("警告：切勿向他人透露您的账户助记词")
+                Text("Warning: Never share your account mnemonic with others")
             }
-            TextField("输入名称", text: self.$web3Model.walletDetailsModel.walletName)
-            SecureField("输入密码", text: self.$web3Model.walletDetailsModel.walletPassword)
-            SecureField("重复密码", text: $textPasswordVerify)
+            TextField("Enter Name", text: self.$web3Model.walletDetailsModel.walletName)
+                .modifier(textFieldModify())
+            SecureField("Enter Password", text: self.$web3Model.walletDetailsModel.walletPassword)
+                .modifier(textFieldModify())
+            SecureField("Repeat Password", text: $textPasswordVerify)
+                .modifier(textFieldModify())
             Button {
-                print("")
+                model.createWallet {
+                    self.isCreatingWallet = true
+                    completion()
+                }
             } label: {
                 Text("Create Wallet")
-                    .frame(width: UIScreen.screenWidth * 0.9 , height: UIScreen.screenWidth / 10, alignment: .center)
+                    .frame(width: UIScreen.screenWidth * 0.9 , height: UIScreen.screenWidth * 0.1, alignment: .center)
                     .foregroundColor(.white)
                     .background(Color("00C29A"))
                     .cornerRadius(10)
             }
             .alert(isPresented: $showingPasswordAlert) {
-                Alert(title: Text("创建失败"), message: Text("请输入相同的密码"), dismissButton: .default(Text("OK")))
+                Alert(title: Text("Create Fail"), message: Text("put in same password"), dismissButton: .default(Text("OK")))
+            }
+            .alert(isPresented: $isCreatingWallet) {
+                Alert(title: Text("Create Success"), message: Text("put in same password"), dismissButton: .default(Text("OK")))
+            }
+            Button {
+                web3Model.clear()
+            } label: {
+                Text("Clear Wallet")
+                    .frame(width: UIScreen.screenWidth * 0.9 , height: UIScreen.screenWidth * 0.1, alignment: .center)
+                    .foregroundColor(.white)
+                    .background(Color("00C29A"))
+                    .cornerRadius(10)
             }
             Spacer()
         }

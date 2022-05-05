@@ -13,7 +13,8 @@ import UIKit
 
 public struct MEGAWalletConstants {
     public static let appGroup = "group." + AppInfo.baseBundleIdentifier
-    public static let keychain = Keychain(service: "MEGAWallet", accessGroup: appGroup)
+//    public static let appGroup = "group.mega.ios"
+//    public static let keychain = Keychain(service: "MEGAWallet", accessGroup: appGroup)
     public static let cryptoKeychain = Keychain(service: "MEGAWallet")
         .accessibility(.whenUnlockedThisDeviceOnly)
 }

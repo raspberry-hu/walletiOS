@@ -71,6 +71,7 @@
 		125AD4E3281B70BB004EF446 /* MEGAWalletConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125AD4E2281B70BB004EF446 /* MEGAWalletConstants.swift */; };
 		125AD4E7281B7327004EF446 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125AD4E6281B7327004EF446 /* AppInfo.swift */; };
 		125AD4E9281B7EDA004EF446 /* Web3Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125AD4E8281B7EDA004EF446 /* Web3Model.swift */; };
+		125AD4F1281D5F5C004EF446 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 125AD4F0281D5F5C004EF446 /* Defaults */; };
 		12647CD427D7F7C3002033AF /* MediaDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12647CD327D7F7C2002033AF /* MediaDiscoveryViewController.swift */; };
 		12647CD627D7FAAD002033AF /* MediaDiscovery+PhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12647CD527D7FAAD002033AF /* MediaDiscovery+PhotoLibrary.swift */; };
 		12696B0E27A8B122008628EA /* PhotoLibraryZoomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12696B0A27A8B121008628EA /* PhotoLibraryZoomControl.swift */; };
@@ -80,6 +81,7 @@
 		12BC3E7127B3043D009F7987 /* PhotoExplorerViewController+PhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BC3E7027B3043D009F7987 /* PhotoExplorerViewController+PhotoLibrary.swift */; };
 		12BC3E7D27B339D3009F7987 /* PhotoLibraryZoomViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BC3E7C27B339D3009F7987 /* PhotoLibraryZoomViewModifier.swift */; };
 		12E14BA2278CB38700AE1BE8 /* PhotoSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E14BA1278CB38700AE1BE8 /* PhotoSelection.swift */; };
+		12E75C5B2822329C0032DEFB /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C5A2822329C0032DEFB /* TextView.swift */; };
 		12F041CC27E25454007F60CF /* CloudDriveViewController+MedisDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F041CB27E25454007F60CF /* CloudDriveViewController+MedisDiscovery.swift */; };
 		137361901A6664C300B740E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1373618F1A6664C300B740E8 /* main.m */; };
 		137361931A6664C300B740E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 137361921A6664C300B740E8 /* AppDelegate.m */; };
@@ -1145,7 +1147,6 @@
 		858CE8AD281AB8E700BBB993 /* walletImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8AC281AB8E700BBB993 /* walletImportView.swift */; };
 		858CE8AF281AB8F900BBB993 /* walletManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8AE281AB8F900BBB993 /* walletManageView.swift */; };
 		858CE8C8281ACBFB00BBB993 /* walletManageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8C7281ACBFB00BBB993 /* walletManageModel.swift */; };
-		858CE8D1281ACCC000BBB993 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 858CE8D0281ACCC000BBB993 /* Defaults */; };
 		858CE8D4281AD58900BBB993 /* CryptoConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8D3281AD58900BBB993 /* CryptoConfig.swift */; };
 		858CE8D6281AD83A00BBB993 /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8D5281AD83A00BBB993 /* TokenType.swift */; };
 		858CE8D8281AD8AA00BBB993 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8D7281AD8AA00BBB993 /* Prefs.swift */; };
@@ -2562,6 +2563,7 @@
 		12BC3E7027B3043D009F7987 /* PhotoExplorerViewController+PhotoLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoExplorerViewController+PhotoLibrary.swift"; sourceTree = "<group>"; };
 		12BC3E7C27B339D3009F7987 /* PhotoLibraryZoomViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryZoomViewModifier.swift; sourceTree = "<group>"; };
 		12E14BA1278CB38700AE1BE8 /* PhotoSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelection.swift; sourceTree = "<group>"; };
+		12E75C5A2822329C0032DEFB /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		12F041CB27E25454007F60CF /* CloudDriveViewController+MedisDiscovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CloudDriveViewController+MedisDiscovery.swift"; sourceTree = "<group>"; };
 		1373618A1A6664C300B740E8 /* MEGA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEGA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1373618E1A6664C300B740E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -4712,7 +4714,7 @@
 				A82751121E97AB73007CD9E2 /* libresolv.tbd in Frameworks */,
 				BF1164BB27F692DB00E5C5A4 /* KeyboardLayoutGuide in Frameworks */,
 				BF11647D27F6734C00E5C5A4 /* PhoneNumberKit in Frameworks */,
-				858CE8D1281ACCC000BBB993 /* Defaults in Frameworks */,
+				125AD4F1281D5F5C004EF446 /* Defaults in Frameworks */,
 				BFA275E327ED315E00E15B92 /* SDAVAssetExportSession in Frameworks */,
 				BF1164B027F68EC500E5C5A4 /* SDWebImageWebPCoder in Frameworks */,
 				858CE4C928193C2000BBB993 /* KeychainAccess in Frameworks */,
@@ -8207,6 +8209,7 @@
 				858CE8D7281AD8AA00BBB993 /* Prefs.swift */,
 				125AD4E2281B70BB004EF446 /* MEGAWalletConstants.swift */,
 				125AD4E6281B7327004EF446 /* AppInfo.swift */,
+				12E75C5A2822329C0032DEFB /* TextView.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -10880,7 +10883,7 @@
 				BF0CB9352803AEAE00C21F11 /* SAMKeychain */,
 				858CE4C828193C2000BBB993 /* KeychainAccess */,
 				858CE8A8281AB7A900BBB993 /* web3swift */,
-				858CE8D0281ACCC000BBB993 /* Defaults */,
+				125AD4F0281D5F5C004EF446 /* Defaults */,
 			);
 			productName = iMEGA;
 			productReference = 1373618A1A6664C300B740E8 /* MEGA.app */;
@@ -11207,7 +11210,7 @@
 				BF0CB9342803AEAE00C21F11 /* XCRemoteSwiftPackageReference "SAMKeychain" */,
 				858CE4C728193C2000BBB993 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				858CE8A7281AB7A900BBB993 /* XCRemoteSwiftPackageReference "web3swift" */,
-				858CE8CF281ACCC000BBB993 /* XCRemoteSwiftPackageReference "Defaults" */,
+				125AD4EF281D5F5C004EF446 /* XCRemoteSwiftPackageReference "sindresorhus-Defaults" */,
 			);
 			productRefGroup = 1373618B1A6664C300B740E8 /* Products */;
 			projectDirPath = "";
@@ -11932,6 +11935,7 @@
 				5D9DE5B6254BE9E400FA69C8 /* MEGASearchBarView.swift in Sources */,
 				BF6DF366245797CC00D612D0 /* AddToChatViewAnimator.swift in Sources */,
 				5B17C9B31F73DE310093F162 /* InviteFriendsViewController.m in Sources */,
+				12E75C5B2822329C0032DEFB /* TextView.swift in Sources */,
 				BFAFB143252AC6ED003ADFE3 /* FilesExplorerRouter.swift in Sources */,
 				BF782D5B269BA4BB0001D169 /* TransferErrorEntity.swift in Sources */,
 				B6C524E021E3E00C00AE3575 /* AVURLAsset+CameraUpload.m in Sources */,
@@ -15013,6 +15017,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		125AD4EF281D5F5C004EF446 /* XCRemoteSwiftPackageReference "sindresorhus-Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/neevaco/sindresorhus-Defaults";
+			requirement = {
+				branch = "neeva-v4.2.2";
+				kind = branch;
+			};
+		};
 		858CE4C728193C2000BBB993 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
@@ -15027,14 +15039,6 @@
 			requirement = {
 				kind = revision;
 				revision = 6ebfd9a5f19a3d9cd0fbaa478c9408c81847d836;
-			};
-		};
-		858CE8CF281ACCC000BBB993 /* XCRemoteSwiftPackageReference "Defaults" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sindresorhus/Defaults";
-			requirement = {
-				branch = main;
-				kind = branch;
 			};
 		};
 		A8B51ADA27F3534F0030F1EA /* XCRemoteSwiftPackageReference "Haptica" */ = {
@@ -15200,6 +15204,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		125AD4F0281D5F5C004EF446 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 125AD4EF281D5F5C004EF446 /* XCRemoteSwiftPackageReference "sindresorhus-Defaults" */;
+			productName = Defaults;
+		};
 		858CE4C828193C2000BBB993 /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 858CE4C728193C2000BBB993 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
@@ -15209,11 +15218,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 858CE8A7281AB7A900BBB993 /* XCRemoteSwiftPackageReference "web3swift" */;
 			productName = web3swift;
-		};
-		858CE8D0281ACCC000BBB993 /* Defaults */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 858CE8CF281ACCC000BBB993 /* XCRemoteSwiftPackageReference "Defaults" */;
-			productName = Defaults;
 		};
 		A8B51ADB27F3534F0030F1EA /* Haptica */ = {
 			isa = XCSwiftPackageProductDependency;
