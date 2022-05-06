@@ -21,7 +21,6 @@ public struct OnboardingModel {
                     password: password,
                     mnemonicsPassword: "",
                     language: .english)!
-//                let name = Defaults[.walletName].last
                 let name = "MegaWallet"
                 let keyData = try! JSONEncoder().encode(keystore.keystoreParams)
 
@@ -35,11 +34,6 @@ public struct OnboardingModel {
                 try? MEGAWalletConstants.cryptoKeychain.set(privateKey, key: "privateKey\(address)")
                 try? MEGAWalletConstants.cryptoKeychain.set(mnemonics, key: "secretPhrase\(address)")
                 print("\(MEGAWalletConstants.cryptoKeychain[string: "secretPhrase\(Defaults[.walletAddress].last)"] ?? "No secretPhase")")
-//                print("\(MEGAWalletConstants.cryptoKeychain[string: "secretPhrase\(address)"] ?? "No secretPhase")")
-//                print(address)
-//                print(Defaults[.walletAddress].last)
-//                print(mnemonics)
-//                print(MEGAWalletConstants.appGroup)
                 Defaults[.cryptoPublicKey] = wallet.address
                 DispatchQueue.main.async {
                     completion()
@@ -73,8 +67,8 @@ public struct OnboardingModel {
                 }
                 Defaults[.cryptoPublicKey] = address
                 Defaults[.walletAddress].append(address)
-                try MEGAWalletConstants.cryptoKeychain.set(privateKey, key: "privateKey\(Defaults[.walletAddress].last)")
-                try? MEGAWalletConstants.cryptoKeychain.set(mnemonics, key: "secretPhrase\(Defaults[.walletAddress].last)")
+                try MEGAWalletConstants.cryptoKeychain.set(privateKey, key: "privateKey\(address)")
+                try? MEGAWalletConstants.cryptoKeychain.set(mnemonics, key: "secretPhrase\(address)")
                 DispatchQueue.main.async {
                     completion(true)
                 }

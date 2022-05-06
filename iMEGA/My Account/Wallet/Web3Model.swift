@@ -18,6 +18,7 @@ class WalletDetailsModel: ObservableObject {
 
 class Web3Model: ObservableObject {
     @Published var walletDetailsModel: WalletDetailsModel = WalletDetailsModel()
+    var wallet: WalletAccessor?
 }
 
 extension Web3Model {
@@ -27,5 +28,15 @@ extension Web3Model {
     }
     func clear() {
         Defaults[.walletAddress].removeAll()
+    }
+}
+
+extension Web3Model {
+    func getNowAddress() -> String {
+        if Defaults[.walletNowAddress] == "" {
+            return ""
+        }else {
+            return Defaults[.walletNowAddress]
+        }
     }
 }

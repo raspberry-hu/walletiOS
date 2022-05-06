@@ -9,13 +9,9 @@
 import SwiftUI
 
 struct NFTMarketView: View {
+    @EnvironmentObject var web3Model: Web3Model
     var body: some View {
         Text("NFTMarket")
     }
 }
 
-struct NFTMarketView_Previews: PreviewProvider {
-    static var previews: some View {
-        NFTMarketView()
-    }
-}

@@ -12,17 +12,17 @@ struct WalletRootView: View {
     @EnvironmentObject var web3Model: Web3Model
     var body: some View {
         TabView {
-            NFTAssetView()
+            NFTAssetView().environmentObject(web3Model)
                 .tabItem {
                     Image(systemName: "bitcoinsign.square")
                     Text("NFT Asset")
                 }
-            NFTMarketView()
+            NFTMarketView().environmentObject(web3Model)
                 .tabItem {
                     Image(systemName: "cart")
                     Text("NFT Wallet")
                 }
-            DSCDriveView()
+            DSCDriveView().environmentObject(web3Model)
                 .tabItem {
                     Image(systemName: "externaldrive.badge.icloud")
                     Text("DSC Drive")

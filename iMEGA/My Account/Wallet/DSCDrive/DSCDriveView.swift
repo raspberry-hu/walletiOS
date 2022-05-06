@@ -9,13 +9,8 @@
 import SwiftUI
 
 struct DSCDriveView: View {
+    @EnvironmentObject var web3Model: Web3Model
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct DSCDriveView_Previews: PreviewProvider {
-    static var previews: some View {
-        DSCDriveView()
     }
 }

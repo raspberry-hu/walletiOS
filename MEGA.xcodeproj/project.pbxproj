@@ -82,6 +82,30 @@
 		12BC3E7D27B339D3009F7987 /* PhotoLibraryZoomViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BC3E7C27B339D3009F7987 /* PhotoLibraryZoomViewModifier.swift */; };
 		12E14BA2278CB38700AE1BE8 /* PhotoSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E14BA1278CB38700AE1BE8 /* PhotoSelection.swift */; };
 		12E75C5B2822329C0032DEFB /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C5A2822329C0032DEFB /* TextView.swift */; };
+		12E75C66282403900032DEFB /* WalletAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C65282403900032DEFB /* WalletAccessor.swift */; };
+		12E75C692824089F0032DEFB /* WalletConnectSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 12E75C682824089F0032DEFB /* WalletConnectSwift */; };
+		12E75C6C282409A90032DEFB /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 12E75C6B282409A90032DEFB /* CodeScanner */; };
+		12E75C6F28240A8D0032DEFB /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 12E75C6E28240A8D0032DEFB /* SFSafeSymbols */; };
+		12E75C7228240B020032DEFB /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 12E75C7128240B020032DEFB /* SDWebImageSwiftUI */; };
+		12E75C7528240B990032DEFB /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 12E75C7428240B990032DEFB /* SwiftEntryKit */; };
+		12E75C7828240BFE0032DEFB /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C7728240BFE0032DEFB /* Symbol.swift */; };
+		12E75C7E28240C5C0032DEFB /* WalletServeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C7D28240C5C0032DEFB /* WalletServeManager.swift */; };
+		12E75C8028240C790032DEFB /* WalletConnectHandles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C7F28240C790032DEFB /* WalletConnectHandles.swift */; };
+		12E75C8228240C940032DEFB /* TransactionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C8128240C940032DEFB /* TransactionData.swift */; };
+		12E75C8428240CAF0032DEFB /* EthNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C8328240CAF0032DEFB /* EthNode.swift */; };
+		12E75C8628240CCB0032DEFB /* EIP712.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C8528240CCB0032DEFB /* EIP712.swift */; };
+		12E75C8828240CEA0032DEFB /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C8728240CEA0032DEFB /* ArrayExtension.swift */; };
+		12E75C8A28240D050032DEFB /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C8928240D050032DEFB /* TransactionView.swift */; };
+		12E75C8C28240D200032DEFB /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C8B28240D200032DEFB /* URLExtensions.swift */; };
+		12E75C8E28240D460032DEFB /* EffectiveTldNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C8D28240D460032DEFB /* EffectiveTldNames.swift */; };
+		12E75C9028240D5D0032DEFB /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C8F28240D5D0032DEFB /* StringExtensions.swift */; };
+		12E75C9228240D7E0032DEFB /* AlertNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C9128240D7E0032DEFB /* AlertNotifications.swift */; };
+		12E75C982824209D0032DEFB /* FontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C972824209D0032DEFB /* FontStyles.swift */; };
+		12E75C9A2824C4630032DEFB /* CurrencyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C992824C4630032DEFB /* CurrencyStore.swift */; };
+		12E75C9C2824C5230032DEFB /* Web3NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C9B2824C5230032DEFB /* Web3NetworkProvider.swift */; };
+		12E75C9E2824C9B60032DEFB /* CurrencyStoreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C9D2824C9B60032DEFB /* CurrencyStoreAPI.swift */; };
+		12E75CA02824C9E30032DEFB /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75C9F2824C9E30032DEFB /* URLRequestBuilder.swift */; };
+		12E75CA22824D9FA0032DEFB /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E75CA12824D9FA0032DEFB /* NetworkError.swift */; };
 		12F041CC27E25454007F60CF /* CloudDriveViewController+MedisDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F041CB27E25454007F60CF /* CloudDriveViewController+MedisDiscovery.swift */; };
 		137361901A6664C300B740E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1373618F1A6664C300B740E8 /* main.m */; };
 		137361931A6664C300B740E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 137361921A6664C300B740E8 /* AppDelegate.m */; };
@@ -1092,27 +1116,9 @@
 		858CE7B228193E1400BBB993 /* walletInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE78F28193E1400BBB993 /* walletInterface.swift */; };
 		858CE7C728193E1400BBB993 /* walletSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE79428193E1400BBB993 /* walletSetView.swift */; };
 		858CE83728193E1500BBB993 /* NFTAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7A928193E1400BBB993 /* NFTAssetView.swift */; };
-		858CE83828193E1500BBB993 /* NFTAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7A928193E1400BBB993 /* NFTAssetView.swift */; };
-		858CE83928193E1500BBB993 /* NFTAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7A928193E1400BBB993 /* NFTAssetView.swift */; };
-		858CE83A28193E1500BBB993 /* NFTAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7A928193E1400BBB993 /* NFTAssetView.swift */; };
-		858CE83B28193E1500BBB993 /* NFTAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7A928193E1400BBB993 /* NFTAssetView.swift */; };
-		858CE83C28193E1500BBB993 /* NFTAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7A928193E1400BBB993 /* NFTAssetView.swift */; };
-		858CE83D28193E1500BBB993 /* NFTAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7A928193E1400BBB993 /* NFTAssetView.swift */; };
 		858CE84528193E1500BBB993 /* NFTMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7AC28193E1400BBB993 /* NFTMarketView.swift */; };
-		858CE84628193E1500BBB993 /* NFTMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7AC28193E1400BBB993 /* NFTMarketView.swift */; };
-		858CE84728193E1500BBB993 /* NFTMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7AC28193E1400BBB993 /* NFTMarketView.swift */; };
-		858CE84828193E1500BBB993 /* NFTMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7AC28193E1400BBB993 /* NFTMarketView.swift */; };
-		858CE84928193E1500BBB993 /* NFTMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7AC28193E1400BBB993 /* NFTMarketView.swift */; };
-		858CE84A28193E1500BBB993 /* NFTMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7AC28193E1400BBB993 /* NFTMarketView.swift */; };
-		858CE84B28193E1500BBB993 /* NFTMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7AC28193E1400BBB993 /* NFTMarketView.swift */; };
 		858CE84C28193E1500BBB993 /* walletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7AD28193E1400BBB993 /* walletView.swift */; };
 		858CE86128193E1500BBB993 /* DSCDriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7B128193E1400BBB993 /* DSCDriveView.swift */; };
-		858CE86228193E1500BBB993 /* DSCDriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7B128193E1400BBB993 /* DSCDriveView.swift */; };
-		858CE86328193E1500BBB993 /* DSCDriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7B128193E1400BBB993 /* DSCDriveView.swift */; };
-		858CE86428193E1500BBB993 /* DSCDriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7B128193E1400BBB993 /* DSCDriveView.swift */; };
-		858CE86528193E1500BBB993 /* DSCDriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7B128193E1400BBB993 /* DSCDriveView.swift */; };
-		858CE86628193E1500BBB993 /* DSCDriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7B128193E1400BBB993 /* DSCDriveView.swift */; };
-		858CE86728193E1500BBB993 /* DSCDriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7B128193E1400BBB993 /* DSCDriveView.swift */; };
 		858CE86B2819730F00BBB993 /* MEGAMintNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE86A2819730F00BBB993 /* MEGAMintNode.swift */; };
 		858CE86C2819730F00BBB993 /* MEGAMintNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE86A2819730F00BBB993 /* MEGAMintNode.swift */; };
 		858CE86D2819730F00BBB993 /* MEGAMintNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE86A2819730F00BBB993 /* MEGAMintNode.swift */; };
@@ -2565,6 +2571,25 @@
 		12BC3E7C27B339D3009F7987 /* PhotoLibraryZoomViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryZoomViewModifier.swift; sourceTree = "<group>"; };
 		12E14BA1278CB38700AE1BE8 /* PhotoSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelection.swift; sourceTree = "<group>"; };
 		12E75C5A2822329C0032DEFB /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		12E75C65282403900032DEFB /* WalletAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletAccessor.swift; sourceTree = "<group>"; };
+		12E75C7728240BFE0032DEFB /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		12E75C7D28240C5C0032DEFB /* WalletServeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletServeManager.swift; sourceTree = "<group>"; };
+		12E75C7F28240C790032DEFB /* WalletConnectHandles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletConnectHandles.swift; sourceTree = "<group>"; };
+		12E75C8128240C940032DEFB /* TransactionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionData.swift; sourceTree = "<group>"; };
+		12E75C8328240CAF0032DEFB /* EthNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthNode.swift; sourceTree = "<group>"; };
+		12E75C8528240CCB0032DEFB /* EIP712.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EIP712.swift; sourceTree = "<group>"; };
+		12E75C8728240CEA0032DEFB /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		12E75C8928240D050032DEFB /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		12E75C8B28240D200032DEFB /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
+		12E75C8D28240D460032DEFB /* EffectiveTldNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectiveTldNames.swift; sourceTree = "<group>"; };
+		12E75C8F28240D5D0032DEFB /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		12E75C9128240D7E0032DEFB /* AlertNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotifications.swift; sourceTree = "<group>"; };
+		12E75C972824209D0032DEFB /* FontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyles.swift; sourceTree = "<group>"; };
+		12E75C992824C4630032DEFB /* CurrencyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyStore.swift; sourceTree = "<group>"; };
+		12E75C9B2824C5230032DEFB /* Web3NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3NetworkProvider.swift; sourceTree = "<group>"; };
+		12E75C9D2824C9B60032DEFB /* CurrencyStoreAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyStoreAPI.swift; sourceTree = "<group>"; };
+		12E75C9F2824C9E30032DEFB /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		12E75CA12824D9FA0032DEFB /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		12F041CB27E25454007F60CF /* CloudDriveViewController+MedisDiscovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CloudDriveViewController+MedisDiscovery.swift"; sourceTree = "<group>"; };
 		1373618A1A6664C300B740E8 /* MEGA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEGA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1373618E1A6664C300B740E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -4667,6 +4692,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12E75C6F28240A8D0032DEFB /* SFSafeSymbols in Frameworks */,
 				BF1163C227F1305400E5C5A4 /* PanModal in Frameworks */,
 				A8B51ADC27F3534F0030F1EA /* Haptica in Frameworks */,
 				BF11643127F6612A00E5C5A4 /* CHTCollectionViewWaterfallLayoutObjC in Frameworks */,
@@ -4677,6 +4703,8 @@
 				BF1163BB27F12ED000E5C5A4 /* MessageKit in Frameworks */,
 				2FA6DA62243E919D007A8E81 /* Accelerate.framework in Frameworks */,
 				2FA6DA60243E9198007A8E81 /* ImageIO.framework in Frameworks */,
+				12E75C692824089F0032DEFB /* WalletConnectSwift in Frameworks */,
+				12E75C6C282409A90032DEFB /* CodeScanner in Frameworks */,
 				A8F5155827F6F24F00AEE4D6 /* ISEmojiView in Frameworks */,
 				BF1CEA3427FA737200C1A2E5 /* GKContactImage in Frameworks */,
 				2FA6DA5E243E918D007A8E81 /* QuartzCore.framework in Frameworks */,
@@ -4684,6 +4712,7 @@
 				77FD20022359A5A7004FB892 /* libvideoframebuffer_objc.a in Frameworks */,
 				BF1164C027F6A74D00E5C5A4 /* PureLayout in Frameworks */,
 				77FD20032359A5A7004FB892 /* libnative_api.a in Frameworks */,
+				12E75C7228240B020032DEFB /* SDWebImageSwiftUI in Frameworks */,
 				77FD20042359A5A7004FB892 /* libvideocapture_objc.a in Frameworks */,
 				BF11649B27F6891500E5C5A4 /* FirebaseAnalytics in Frameworks */,
 				77FD20052359A5A7004FB892 /* libnative_video.a in Frameworks */,
@@ -4695,6 +4724,7 @@
 				A8F6E8911F9E75D00087859C /* VideoToolbox.framework in Frameworks */,
 				A8B51AE927F3565E0030F1EA /* WSTagsField in Frameworks */,
 				A8F6E88F1F9E75B70087859C /* libwebsockets.a in Frameworks */,
+				12E75C7528240B990032DEFB /* SwiftEntryKit in Frameworks */,
 				BF0CB9362803AEAE00C21F11 /* SAMKeychain in Frameworks */,
 				858CE8A9281AB7A900BBB993 /* web3swift in Frameworks */,
 				A8F5158727F6FF4F00AEE4D6 /* FlexLayoutYoga in Frameworks */,
@@ -5213,6 +5243,32 @@
 				1243A31C276AB8F100067A8F /* CheckMarkView.swift */,
 			);
 			path = "Photo Cell";
+			sourceTree = "<group>";
+		};
+		12E75C7628240BE10032DEFB /* WalletConnect */ = {
+			isa = PBXGroup;
+			children = (
+				12E75C65282403900032DEFB /* WalletAccessor.swift */,
+				12E75C7728240BFE0032DEFB /* Symbol.swift */,
+				12E75C7D28240C5C0032DEFB /* WalletServeManager.swift */,
+				12E75C7F28240C790032DEFB /* WalletConnectHandles.swift */,
+				12E75C8128240C940032DEFB /* TransactionData.swift */,
+				12E75C8328240CAF0032DEFB /* EthNode.swift */,
+				12E75C8528240CCB0032DEFB /* EIP712.swift */,
+				12E75C8728240CEA0032DEFB /* ArrayExtension.swift */,
+				12E75C8928240D050032DEFB /* TransactionView.swift */,
+				12E75C8B28240D200032DEFB /* URLExtensions.swift */,
+				12E75C8D28240D460032DEFB /* EffectiveTldNames.swift */,
+				12E75C8F28240D5D0032DEFB /* StringExtensions.swift */,
+				12E75C9128240D7E0032DEFB /* AlertNotifications.swift */,
+				12E75C972824209D0032DEFB /* FontStyles.swift */,
+				12E75C992824C4630032DEFB /* CurrencyStore.swift */,
+				12E75C9B2824C5230032DEFB /* Web3NetworkProvider.swift */,
+				12E75C9D2824C9B60032DEFB /* CurrencyStoreAPI.swift */,
+				12E75C9F2824C9E30032DEFB /* URLRequestBuilder.swift */,
+				12E75CA12824D9FA0032DEFB /* NetworkError.swift */,
+			);
+			path = WalletConnect;
 			sourceTree = "<group>";
 		};
 		137361811A6664C300B740E8 = {
@@ -8204,6 +8260,7 @@
 		858CE896281A78E000BBB993 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				12E75C7628240BE10032DEFB /* WalletConnect */,
 				858CE8D5281AD83A00BBB993 /* TokenType.swift */,
 				858CE8D3281AD58900BBB993 /* CryptoConfig.swift */,
 				858CE897281A78F000BBB993 /* UIScreen.swift */,
@@ -10887,6 +10944,11 @@
 				858CE4C828193C2000BBB993 /* KeychainAccess */,
 				858CE8A8281AB7A900BBB993 /* web3swift */,
 				125AD4F0281D5F5C004EF446 /* Defaults */,
+				12E75C682824089F0032DEFB /* WalletConnectSwift */,
+				12E75C6B282409A90032DEFB /* CodeScanner */,
+				12E75C6E28240A8D0032DEFB /* SFSafeSymbols */,
+				12E75C7128240B020032DEFB /* SDWebImageSwiftUI */,
+				12E75C7428240B990032DEFB /* SwiftEntryKit */,
 			);
 			productName = iMEGA;
 			productReference = 1373618A1A6664C300B740E8 /* MEGA.app */;
@@ -11214,6 +11276,11 @@
 				858CE4C728193C2000BBB993 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				858CE8A7281AB7A900BBB993 /* XCRemoteSwiftPackageReference "web3swift" */,
 				125AD4EF281D5F5C004EF446 /* XCRemoteSwiftPackageReference "sindresorhus-Defaults" */,
+				12E75C672824089F0032DEFB /* XCRemoteSwiftPackageReference "WalletConnectSwift" */,
+				12E75C6A282409A80032DEFB /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				12E75C6D28240A8D0032DEFB /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
+				12E75C7028240B020032DEFB /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				12E75C7328240B990032DEFB /* XCRemoteSwiftPackageReference "SwiftEntryKit" */,
 			);
 			productRefGroup = 1373618B1A6664C300B740E8 /* Products */;
 			projectDirPath = "";
@@ -11821,6 +11888,7 @@
 				C4F31EF925C1C50B00E15146 /* CustomTitleView.swift in Sources */,
 				0D7E5E2326311EA100C5CB2A /* NodeTypeEntity+Mapper.swift in Sources */,
 				83D5DB2E23E9930200B09412 /* MEGAChatSDK+Additions.swift in Sources */,
+				12E75C8A28240D050032DEFB /* TransactionView.swift in Sources */,
 				BFB463ED2433FD9C00FB90B9 /* Date+Additions.swift in Sources */,
 				B6B278DE24E1E93000BB3E9A /* AchievementUseCase.swift in Sources */,
 				A882F51C27E1E6010032DC07 /* NetworkMonitorUseCase.swift in Sources */,
@@ -11881,6 +11949,7 @@
 				B6AADEAF25188F8D009A874C /* SMSRepositoryProtocol.swift in Sources */,
 				124306D727E16048003286C8 /* MediaDiscoveryRouter.swift in Sources */,
 				B6C524DD21E2BC9900AE3575 /* AVAsset+CameraUpload.m in Sources */,
+				12E75CA22824D9FA0032DEFB /* NetworkError.swift in Sources */,
 				12466833275DBE0600C94335 /* TextEditorViewRouter.swift in Sources */,
 				C4EACA912772502B00C6ACA3 /* MyChatFilesFolderNodeAccess.swift in Sources */,
 				5B9199F426E7CAF600402358 /* ThumbnailRepository.swift in Sources */,
@@ -11953,6 +12022,7 @@
 				5D3AD46F252C370C006986AF /* CellConfiguration.swift in Sources */,
 				5D64660A24890CC7006030A5 /* TextStyle.swift in Sources */,
 				120B4A7B27430F5E00312B35 /* XCAssets+Generated.swift in Sources */,
+				12E75C9E2824C9B60032DEFB /* CurrencyStoreAPI.swift in Sources */,
 				5D8A76F224FCD0C900C0610C /* MEGAAvatarUserCase.swift in Sources */,
 				BF5E345F255A2E1A0055395E /* FilesExplorerGridSource.swift in Sources */,
 				83E345BA25B59FB4006F2AD6 /* RecentItemsUseCase.swift in Sources */,
@@ -12048,6 +12118,7 @@
 				BFAB114B23CEA5C300BCE72D /* PhotoCarouselDelegate.swift in Sources */,
 				5D31674224FC9A1B0032492F /* UIResponder+ErrorHandling.swift in Sources */,
 				0D7E5E3B2631258700C5CB2A /* TransferDelegate.swift in Sources */,
+				12E75C982824209D0032DEFB /* FontStyles.swift in Sources */,
 				858CE84C28193E1500BBB993 /* walletView.swift in Sources */,
 				A8F5154F27F5FD4100AEE4D6 /* WarningViewRouter.swift in Sources */,
 				B6B959412193A9140064334D /* ThumbnailUploadOperation.m in Sources */,
@@ -12108,6 +12179,7 @@
 				8361359021074C5D002FA3CC /* MOUploadTransfer+CoreDataClass.m in Sources */,
 				A86E34B3217F705700EFCAB0 /* MEGAChatGenericRequestDelegate.m in Sources */,
 				4156C80C1AD7E79A00F5E818 /* LTHKeychainUtils.m in Sources */,
+				12E75C9C2824C5230032DEFB /* Web3NetworkProvider.swift in Sources */,
 				77F43DD92034637300AE4F42 /* UICollectionView+MNZCategory.m in Sources */,
 				5D6D0F5325270357002A777D /* DevicePermissionRequestUseCaseProtocol.swift in Sources */,
 				BF782D66269BA4BB0001D169 /* NodeEntity.swift in Sources */,
@@ -12124,6 +12196,7 @@
 				83C1B25225A7349000814074 /* QuickAccessWidgetViewModel.swift in Sources */,
 				B677DC1D2787D60700EC30AC /* PhotoSectionHeader.swift in Sources */,
 				5B222A74205A9CD40083D433 /* MEGAChatAttachNodeRequestDelegate.m in Sources */,
+				12E75C9028240D5D0032DEFB /* StringExtensions.swift in Sources */,
 				C49F8621255ABEA80074A054 /* AudioPlayerViewController.swift in Sources */,
 				A873E85D26E2248E00CBB174 /* FileVersioningViewRouter.swift in Sources */,
 				5BC3D060242A36240048123A /* UIColor+Additions.swift in Sources */,
@@ -12172,6 +12245,7 @@
 				B6790E06256B81C600154F6D /* MEGANode+Additions.swift in Sources */,
 				83BFA3AA27CFBCEC00BDF997 /* CloudDriveViewController+NodeActionViewControllerDelegate.swift in Sources */,
 				B6F39F272773D547002386BE /* PhotoChronologicalCategory+Additions.swift in Sources */,
+				12E75C8828240CEA0032DEFB /* ArrayExtension.swift in Sources */,
 				B6730B1E2738482600A9CF5F /* MEGAFileTypes.swift in Sources */,
 				BFAC874C25FEF75F009CA3F6 /* AudioSessionRepositoryProtocol.swift in Sources */,
 				BF782D60269BA4BB0001D169 /* CameraPositionEntity.swift in Sources */,
@@ -12208,6 +12282,7 @@
 				A89CBD2C27F45B06006D0949 /* WarningView.swift in Sources */,
 				B60DDC1621A7A7930097E4A3 /* MEGAConstants.m in Sources */,
 				0D213D222638DF9300B43723 /* CHTCollectionViewWaterfallLayout+Additions.swift in Sources */,
+				12E75CA02824C9E30032DEFB /* URLRequestBuilder.swift in Sources */,
 				415226911A692ECC00EC7BB6 /* ContactsViewController.m in Sources */,
 				A8F0A1C7217898F600575C57 /* MEGALocalNotificationManager.m in Sources */,
 				C4A5F0E8266E31DE001D783B /* MEGALabel.swift in Sources */,
@@ -12216,6 +12291,7 @@
 				B582966A27C5EADF004DD7A5 /* CreateAccountViewController+Additions.swift in Sources */,
 				2F14778A244D2E2A0069B264 /* GeoLocationView.swift in Sources */,
 				B6ADE4DC2732189000C19F36 /* FileSystemRepository.swift in Sources */,
+				12E75C8428240CAF0032DEFB /* EthNode.swift in Sources */,
 				B662B89124FC40090089376A /* RegionListIndexedSource.swift in Sources */,
 				A8C1B7B3277384BC007095F4 /* OfflineCollectionViewController+ContextMenu.swift in Sources */,
 				BFD23CCE236255A5005D4A1E /* NicknameViewController.swift in Sources */,
@@ -12322,6 +12398,7 @@
 				E8CD19871A9266D600CB8B2A /* UnavailableLinkView.m in Sources */,
 				A84E92E326FB5F7400606AA7 /* FileVersionsRepository.swift in Sources */,
 				BF782D68269BA4BB0001D169 /* AchievementTypeEntity.swift in Sources */,
+				12E75C7E28240C5C0032DEFB /* WalletServeManager.swift in Sources */,
 				5B1AB4AF20E5407300FEDAF9 /* MEGAQuerySignupLinkRequestDelegate.m in Sources */,
 				5D8303E7256270800082CA18 /* BannerEntity.swift in Sources */,
 				5D4244D22512005500EE544D /* NodeSearchRepository.swift in Sources */,
@@ -12488,6 +12565,7 @@
 				B672EDB3221CD96000DE6684 /* CameraUploadOperation+Utils.m in Sources */,
 				B699D58B2759724C006132EF /* PhotoCard.swift in Sources */,
 				83850A4526B2BC1100C62304 /* MEGAProviderDelegate+Additions.swift in Sources */,
+				12E75C8228240C940032DEFB /* TransactionData.swift in Sources */,
 				839999ED264AE54A00520F38 /* MeetingOptionsMenuViewModel.swift in Sources */,
 				5D4244E0251305BD00EE544D /* SearchResultFileTableViewCell.swift in Sources */,
 				B6ADE4D927320C3300C19F36 /* PhotoYearCard.swift in Sources */,
@@ -12532,6 +12610,7 @@
 				5D1B23FC24AF5C8100ACE1C5 /* TextStyleFactory.swift in Sources */,
 				C498894926B19D6700C41E25 /* AchievementsViewController+Additions.swift in Sources */,
 				12696B1027A8B122008628EA /* PhotoLibraryZoomState.swift in Sources */,
+				12E75C9228240D7E0032DEFB /* AlertNotifications.swift in Sources */,
 				E8F791821BC5754A00C58676 /* ShareFolderActivity.m in Sources */,
 				BF782D5D269BA4BB0001D169 /* FavouriteItemEntity.swift in Sources */,
 				C45E402125DD1C230060E116 /* AudioPlayerManager.swift in Sources */,
@@ -12599,6 +12678,7 @@
 				C46D2A80270F1B5E00DA26D0 /* DynamicTypeCollectionManager.swift in Sources */,
 				B6D9D7E9216AB0C700D7B08A /* CameraScanner.m in Sources */,
 				A80B66E125E7F72000486EC5 /* MEGANode+Mapper.swift in Sources */,
+				12E75C9A2824C4630032DEFB /* CurrencyStore.swift in Sources */,
 				BF6D30AA25390BBA00BD4653 /* FilesSearchUseCase.swift in Sources */,
 				C4709A9D26B05F52008FB0C8 /* ProductDetailViewController+Additions.swift in Sources */,
 				5B9F5D51259DD5BB00BADB11 /* CookieSettingsRepositoryProtocol.swift in Sources */,
@@ -12680,6 +12760,7 @@
 				942F4FD81F500A8F001FC4AC /* MEGASdk+MNZCategory.m in Sources */,
 				BFD6536025EDE8E500052DE8 /* MeetingParticipantInfoViewController.swift in Sources */,
 				2F53F84F2612B8860027A5EF /* NSURL+Deeplinking.swift in Sources */,
+				12E75C8628240CCB0032DEFB /* EIP712.swift in Sources */,
 				BFAB114223CEA5C300BCE72D /* PhotoCarouselVideoIcon.swift in Sources */,
 				BF90C7B926040AC6006061F8 /* UserStoreRepositoryProtocol.swift in Sources */,
 				BF9D491C2459047800D7B7DC /* AddToChatAllowAccessCollectionCell.swift in Sources */,
@@ -12876,6 +12957,7 @@
 				77597006219DD4D100B31671 /* MEGAUserAlertList+MNZCategory.m in Sources */,
 				BF0ACD64240C87A80002101E /* MEGAChatListItem+Additions.swift in Sources */,
 				5DF016812499BD60005A121D /* MEGAPlan.swift in Sources */,
+				12E75C7828240BFE0032DEFB /* Symbol.swift in Sources */,
 				5D92DD1224BFE2B200D7D13B /* DateFormatter+SystemDateFormatter.swift in Sources */,
 				2F6F0891253E387600C5B5D7 /* TransferTableViewCell.m in Sources */,
 				772BA5722243C7D100F062CB /* UITableView+MNZCategory.m in Sources */,
@@ -12916,6 +12998,7 @@
 				4152268F1A692ECC00EC7BB6 /* NodeTableViewCell.m in Sources */,
 				BF7EBD4A245293530015255F /* AddToChatMenuViewController.swift in Sources */,
 				A8E1CFA326EA655A00EB7D3A /* FileVersionsRepositoryProtocol.swift in Sources */,
+				12E75C66282403900032DEFB /* WalletAccessor.swift in Sources */,
 				125AD4E3281B70BB004EF446 /* MEGAWalletConstants.swift in Sources */,
 				E8D5BF691BF35DC400955550 /* SharedItemsViewController.m in Sources */,
 				5D73F50E24F74F850041D9FB /* ImagePickerViewController.swift in Sources */,
@@ -13008,6 +13091,7 @@
 				830C265E25DFC6D300E9B56E /* FavouriteNodesRepositoryProtocol.swift in Sources */,
 				2FDE43B924B6C11D00280A75 /* NSObject+Debounce.m in Sources */,
 				A81AD7391F3099F800CA4059 /* MEGAProcessAsset.m in Sources */,
+				12E75C8028240C790032DEFB /* WalletConnectHandles.swift in Sources */,
 				2FBC74C8245BE74900BE513F /* ChatViewController+EmptyDataSet.swift in Sources */,
 				72718962280012A400B2DB08 /* FeedbackRepositoryProtocol.swift in Sources */,
 				BF5E3495255C8FD10055395E /* FilesExplorerViewController.swift in Sources */,
@@ -13032,6 +13116,7 @@
 				A81C6593254B2EC900105BF4 /* GiphyPreviewViewController.swift in Sources */,
 				C45D79252593AD5600EB6C2F /* MiniPlayerDataSource.swift in Sources */,
 				B662B88324F8D8F60089376A /* RegionListViewModel.swift in Sources */,
+				12E75C8E28240D460032DEFB /* EffectiveTldNames.swift in Sources */,
 				4152269A1A692ECC00EC7BB6 /* Helper.m in Sources */,
 				5DA32DC124EA923D0075B613 /* UserAlert.swift in Sources */,
 				2F2801DF2449587400C160D0 /* ChatVoiceClipCollectionViewCell.swift in Sources */,
@@ -13068,6 +13153,7 @@
 				B6B3C366222628C200918D44 /* TransferResponseValidator.m in Sources */,
 				5D64660824890BEA006030A5 /* HexColor.swift in Sources */,
 				B567EF8A27EAF7640014B26C /* PhotosViewController+Banner.swift in Sources */,
+				12E75C8C28240D200032DEFB /* URLExtensions.swift in Sources */,
 				B6C444D7274A283300268D9A /* PhotoLibraryAllViewModel.swift in Sources */,
 				83850A4026B2AACD00C62304 /* EnterMeetingLinkRouter.swift in Sources */,
 				83E3459B25B598A1006F2AD6 /* QuickAccessWidgetRecentItem+CoreDataClass.swift in Sources */,
@@ -13101,7 +13187,6 @@
 				858CE89E281A7AEE00BBB993 /* ButtonStyle.swift in Sources */,
 				7794AEDF231E54120039C1D2 /* MEGASdkManager.m in Sources */,
 				774941E02410EAE000FC5CB6 /* MOMediaDestination+CoreDataClass.m in Sources */,
-				858CE83B28193E1500BBB993 /* NFTAssetView.swift in Sources */,
 				774941E32410EAFB00FC5CB6 /* MOOfflineFolderLayout+CoreDataClass.m in Sources */,
 				774941DB240FF69800FC5CB6 /* MEGAStore.m in Sources */,
 				858CE8A4281A7B3600BBB993 /* UIScreen.swift in Sources */,
@@ -13119,7 +13204,6 @@
 				774941E22410EAEF00FC5CB6 /* MOFolderLayout+CoreDataClass.m in Sources */,
 				BF22BFBC268AF67700460DB3 /* MOUploadTransfer+Mapper.swift in Sources */,
 				B5925B8D279119E400170CD6 /* Colors+Generated.swift in Sources */,
-				858CE86528193E1500BBB993 /* DSCDriveView.swift in Sources */,
 				A81DF35D2508FDAD009C8B60 /* Date+Formatting.swift in Sources */,
 				77FCB86523FD718A009E8032 /* NSString+MNZCategory.m in Sources */,
 				7794AED7231E4E0A0039C1D2 /* NotificationService.swift in Sources */,
@@ -13133,7 +13217,6 @@
 				B5300AF52754A0A1001E516B /* Strings+Generated.swift in Sources */,
 				774941E12410EAE900FC5CB6 /* MOUploadTransfer+CoreDataClass.m in Sources */,
 				B53BDBEC27619172001D73F8 /* XCAssets+Generated.swift in Sources */,
-				858CE84928193E1500BBB993 /* NFTMarketView.swift in Sources */,
 				7794AF19231FDF3D0039C1D2 /* Reachability.m in Sources */,
 				7794AF16231FDE0A0039C1D2 /* MEGAReachabilityManager.m in Sources */,
 				7794AEE1231E5BC00039C1D2 /* MEGAConstants.m in Sources */,
@@ -13165,7 +13248,6 @@
 				83344F73258A1CE40052DB3C /* AuthRepositoryProtocol.swift in Sources */,
 				83655A5F259379C2001A0846 /* MEGAStore.m in Sources */,
 				B67507DC2769E8350034F951 /* MEGAFileTypes.swift in Sources */,
-				858CE83C28193E1500BBB993 /* NFTAssetView.swift in Sources */,
 				B5EDB093275A2CAE00A8CFC2 /* XCAssets+Generated.swift in Sources */,
 				B6F8CE212628232C0074CBBF /* CoreDataErrorHandler.m in Sources */,
 				B6FD64EE2689E2BD00988A17 /* FavouriteItemsRepositoryProtocol.swift in Sources */,
@@ -13193,7 +13275,6 @@
 				B6FD64F12689E2C600988A17 /* FavouriteItemsRepository.swift in Sources */,
 				8311A2CA25876A2E0027BEFF /* MEGANodeList+MNZCategory.m in Sources */,
 				8318CE8E2562DA0600C97779 /* ShortcutsWidget.swift in Sources */,
-				858CE86628193E1500BBB993 /* DSCDriveView.swift in Sources */,
 				8359E4B325F0E1DF0023FE18 /* QuickAccessWidgetAction.swift in Sources */,
 				B6730B0F27361BEC00A9CF5F /* MVVM-R.swift in Sources */,
 				858CE8782819734300BBB993 /* MintModel.swift in Sources */,
@@ -13206,7 +13287,6 @@
 				830C275425E51FEC00E9B56E /* DateFormatting.swift in Sources */,
 				8337BC61256283F400F3A81A /* ShortcutDetail.swift in Sources */,
 				83344F61258A1CAC0052DB3C /* CredentialRepositoryProtocol.swift in Sources */,
-				858CE84A28193E1500BBB993 /* NFTMarketView.swift in Sources */,
 				83655A8325938499001A0846 /* MOMessage+CoreDataProperties.m in Sources */,
 				83E3454E25B58DDC006F2AD6 /* QuickAccessWidgetRecentItem+CoreDataClass.swift in Sources */,
 				8361086325AF156800CAC6E1 /* MEGALogger.m in Sources */,
@@ -13256,10 +13336,7 @@
 				B5300AF72754A0AA001E516B /* Strings+Generated.swift in Sources */,
 				858CE8A6281A7B3700BBB993 /* UIScreen.swift in Sources */,
 				831B497C256FF2580086002B /* ShortcutDetail.swift in Sources */,
-				858CE83D28193E1500BBB993 /* NFTAssetView.swift in Sources */,
 				858CE8712819730F00BBB993 /* MEGAMintNode.swift in Sources */,
-				858CE86728193E1500BBB993 /* DSCDriveView.swift in Sources */,
-				858CE84B28193E1500BBB993 /* NFTMarketView.swift in Sources */,
 				B5925B8F279119E400170CD6 /* Colors+Generated.swift in Sources */,
 				858CE8792819734300BBB993 /* MintModel.swift in Sources */,
 			);
@@ -13281,7 +13358,6 @@
 				83FF5030247E86F600EAC08B /* CustomModalAlertViewController.m in Sources */,
 				83B841682051913C00E5AC69 /* MEGAGetThumbnailRequestDelegate.m in Sources */,
 				A82D5CDC26BC07A900E73D27 /* PreferenceRepositoryProtocol.swift in Sources */,
-				858CE84628193E1500BBB993 /* NFTMarketView.swift in Sources */,
 				5BE689BB2419189600462134 /* AppearancePreference+CoreDataClass.swift in Sources */,
 				2F25A2DC240C92C0005EF524 /* StorageFullModalAlertViewController.swift in Sources */,
 				5BFA34701FAC5857005BFC4E /* MEGAMoveRequestDelegate.m in Sources */,
@@ -13329,7 +13405,6 @@
 				9456054A1EDD7AD70094EF0F /* LTHKeychainUtils.m in Sources */,
 				C42C35792743D96D004D8BA9 /* NodeLoadOperation.swift in Sources */,
 				945605481EDD6F9B0094EF0F /* MEGAReachabilityManager.m in Sources */,
-				858CE86228193E1500BBB993 /* DSCDriveView.swift in Sources */,
 				943229341EDD8823007DB542 /* MEGANavigationController.m in Sources */,
 				C4C6A49927A4632600873165 /* MegaNode+Additions.swift in Sources */,
 				5BA81EA41FC30C9A00C8146C /* MEGAShareRequestDelegate.m in Sources */,
@@ -13392,7 +13467,6 @@
 				A8F0A1DA2178B41900575C57 /* MOMessage+CoreDataClass.m in Sources */,
 				858CE89B281A7AEC00BBB993 /* ButtonStyle.swift in Sources */,
 				C46517A3272C9DC8004F27A0 /* MEGANodeList+Mapper.swift in Sources */,
-				858CE83828193E1500BBB993 /* NFTAssetView.swift in Sources */,
 				9432294C1EDD9CE9007DB542 /* NSFileManager+MNZCategory.m in Sources */,
 				8361359121074C5D002FA3CC /* MOUploadTransfer+CoreDataClass.m in Sources */,
 				C460506E27282F9400D67A44 /* MEGAOperation.m in Sources */,
@@ -13403,12 +13477,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				858CE84728193E1500BBB993 /* NFTMarketView.swift in Sources */,
 				944DF2BC1EF9379E007798DD /* MEGALogger.m in Sources */,
-				858CE83928193E1500BBB993 /* NFTAssetView.swift in Sources */,
 				B60D527625F8888F003E9829 /* UIDevice+MNZCategory.m in Sources */,
 				B5300AF32754A098001E516B /* Strings+Generated.swift in Sources */,
-				858CE86328193E1500BBB993 /* DSCDriveView.swift in Sources */,
 				858CE8752819734300BBB993 /* MintModel.swift in Sources */,
 				B6451650223201A2001680BC /* MEGAConstants.m in Sources */,
 				858CE86D2819730F00BBB993 /* MEGAMintNode.swift in Sources */,
@@ -13496,7 +13567,6 @@
 				A81F2C6A1F334FB2008600A5 /* MEGAProcessAsset.m in Sources */,
 				A8F0A1DC2178B43300575C57 /* MOMessage+CoreDataClass.m in Sources */,
 				858CE86E2819730F00BBB993 /* MEGAMintNode.swift in Sources */,
-				858CE83A28193E1500BBB993 /* NFTAssetView.swift in Sources */,
 				943F8B281EF283D300AFD89F /* UIDevice+MNZCategory.m in Sources */,
 				77F0522122CB8BA800032138 /* MEGAGenericRequestDelegate.m in Sources */,
 				A836581B21020FB9005E616F /* ItemListViewController.m in Sources */,
@@ -13546,7 +13616,6 @@
 				9411355A1F01006A00D33428 /* LTHPasscodeViewController.m in Sources */,
 				5BE689B22419187F00462134 /* OfflineAppearancePreference+CoreDataProperties.swift in Sources */,
 				BFF9D86326C3AFCA00E6433F /* ChatRoomErrorEntity.swift in Sources */,
-				858CE84828193E1500BBB993 /* NFTMarketView.swift in Sources */,
 				5B3B0D152684B24800479A68 /* ShareViewController.m in Sources */,
 				C482B7CA271EFCA10074CFC4 /* MVVM-R.swift in Sources */,
 				A82D5CE726BC090500E73D27 /* CredentialRepositoryProtocol.swift in Sources */,
@@ -13556,7 +13625,6 @@
 				C42C35762743D8E3004D8BA9 /* BackupRootNodeAccess.swift in Sources */,
 				941135641F01071600D33428 /* NSString+MNZCategory.m in Sources */,
 				BFE54779231F0F29007FB8F6 /* UIViewController+MNZCategory.m in Sources */,
-				858CE86428193E1500BBB993 /* DSCDriveView.swift in Sources */,
 				A81DF3602508FE23009C8B60 /* Date+Formatting.swift in Sources */,
 				2F25A2DD240C92C1005EF524 /* StorageFullModalAlertViewController.swift in Sources */,
 				C460506F27282F9500D67A44 /* MEGAOperation.m in Sources */,
@@ -15029,6 +15097,46 @@
 				kind = branch;
 			};
 		};
+		12E75C672824089F0032DEFB /* XCRemoteSwiftPackageReference "WalletConnectSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WalletConnect/WalletConnectSwift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		12E75C6A282409A80032DEFB /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		12E75C6D28240A8D0032DEFB /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SFSafeSymbols/SFSafeSymbols.git";
+			requirement = {
+				branch = stable;
+				kind = branch;
+			};
+		};
+		12E75C7028240B020032DEFB /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		12E75C7328240B990032DEFB /* XCRemoteSwiftPackageReference "SwiftEntryKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huri000/SwiftEntryKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		858CE4C728193C2000BBB993 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
@@ -15212,6 +15320,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 125AD4EF281D5F5C004EF446 /* XCRemoteSwiftPackageReference "sindresorhus-Defaults" */;
 			productName = Defaults;
+		};
+		12E75C682824089F0032DEFB /* WalletConnectSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12E75C672824089F0032DEFB /* XCRemoteSwiftPackageReference "WalletConnectSwift" */;
+			productName = WalletConnectSwift;
+		};
+		12E75C6B282409A90032DEFB /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12E75C6A282409A80032DEFB /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+		12E75C6E28240A8D0032DEFB /* SFSafeSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12E75C6D28240A8D0032DEFB /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			productName = SFSafeSymbols;
+		};
+		12E75C7128240B020032DEFB /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12E75C7028240B020032DEFB /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		12E75C7428240B990032DEFB /* SwiftEntryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12E75C7328240B990032DEFB /* XCRemoteSwiftPackageReference "SwiftEntryKit" */;
+			productName = SwiftEntryKit;
 		};
 		858CE4C828193C2000BBB993 /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;

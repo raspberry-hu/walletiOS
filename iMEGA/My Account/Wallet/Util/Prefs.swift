@@ -34,3 +34,8 @@ extension Defaults {
         Key<Bool>(key, default: defaultValue, suite: suite)
     }
 }
+extension Defaults.Keys {
+    static func dAppsSession(_ sessionID: String) -> Defaults.Key<Data?> {
+        Defaults.Key("DataForSession" + sessionID)
+    }
+}
