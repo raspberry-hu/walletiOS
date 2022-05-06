@@ -20,6 +20,10 @@ public struct WalletAccessor {
     var password: String
     var web3: web3?
     var polygonWeb3: web3?
+//    let keystore: EthereumKeystoreV3?
+//    let password: String
+//    let web3: web3?
+//    let polygonWeb3: web3?
     
     func web3(on chain: EthNode) -> web3? {
         switch chain {
@@ -64,7 +68,7 @@ public struct WalletAccessor {
     }
     
     var privateKey: [UInt8] {
-        let key = "dafbeffab93be815ae9f393469991f5970e8b3ae49900afee409bbbc4d7b87c1"
+        let key = MEGAWalletConstants.cryptoKeychain[string: "privateKey\(Defaults[.walletNowAddress])"] ?? ""
         let formattedKey = key.trimmingCharacters(in: .whitespacesAndNewlines)
         return formattedKey.bytes
     }

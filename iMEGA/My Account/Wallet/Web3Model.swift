@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 import Defaults
+import web3swift
 
 class WalletDetailsModel: ObservableObject {
     @Published var walletName: String = ""
@@ -19,6 +20,34 @@ class WalletDetailsModel: ObservableObject {
 class Web3Model: ObservableObject {
     @Published var walletDetailsModel: WalletDetailsModel = WalletDetailsModel()
     var wallet: WalletAccessor?
+    var publicAddress: String {
+        wallet?.publicAddress ?? ""
+    }
+    var balances: [TokenType: String?] = [
+        .ether: nil, .wrappedEther: nil, .matic: nil, .usdc: nil, .usdt: nil, .shib: nil,
+        .wrappedEtherOnPolygon: nil, .maticOnPolygon: nil, .usdcOnPolygon: nil,
+        .usdtOnPolygon: nil,
+    ]
+    init() {
+        self.wallet = WalletAccessor()
+    }
+}
+
+extension Web3Model {
+    func balanceFor(_ token: TokenType) -> String? {
+        balances[token]!
+    }
+
+    func updateBalances() {
+        CurrencyStore.shared.refresh()
+        balances.keys.forEach { token in
+            wallet?.tokenBalance(token: token) { balance in
+                self.balances[token] = balance
+                self.objectWillChange.send()
+                print("更新")
+            }
+        }
+    }
 }
 
 extension Web3Model {
