@@ -29,7 +29,7 @@ struct MegaWalletNFTRootView: View {
             }
             .refreshable {
                 self.store.dispatch(
-                    .NFTAssetGet(address: UserDefaults.standard.string(forKey: "walletAddress")!)
+                    .NFTAssetGet(address: UserDefaults.standard.string(forKey: "walletNowAddress")!)
                 )
                 self.NFTAsset = store.appState.NFTAsset.NFTAssetImage
             }

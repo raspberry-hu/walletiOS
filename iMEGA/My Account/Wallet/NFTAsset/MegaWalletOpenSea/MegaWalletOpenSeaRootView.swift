@@ -153,7 +153,7 @@ struct MegaWalletOpenSeaRootView: View {
 //            )
 //            self.NFTAssetDeatilBundle = store.appState.NFTAssetDetail.NFTAssetImage
             self.store.dispatch(
-                .NFTAssetGet(address: UserDefaults.standard.string(forKey: "walletAddress")!)
+                .NFTAssetGet(address: UserDefaults.standard.string(forKey: "walletNowAddress")!)
             )
             self.NFTAssetDeatilSell = store.appState.NFTAsset.NFTAssetImage
             print("appear更新成功")
