@@ -13,7 +13,7 @@ import web3swift
 class WalletRootInterface: NSObject {
     let web3Model = Web3Model()
     @objc func makeWalletRootViewUI() -> UIViewController{
-        let view = WalletRootView().environmentObject(web3Model)
+        let view = WalletRootView().environmentObject(web3Model).environmentObject(Store())
         return UIHostingController(rootView: view)
     }
 }

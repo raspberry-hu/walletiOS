@@ -9,8 +9,10 @@
 import SwiftUI
 import Defaults
 
+@available(iOS 14.0, *)
 struct NFTAssetView: View {
     @EnvironmentObject var web3Model: Web3Model
+    @EnvironmentObject var store: Store
     private var walletOptions = ["虚拟货币", "NFT", "挂单信息"]
     @State private var selctedItem: Int = 0
     @State private var searchText: String = ""
@@ -37,13 +39,13 @@ struct NFTAssetView: View {
                 }
                 .padding()
                 if selctedItem == 0 {
-                    Text("1")
+                    MegaWalletCoinView()
                 }
                 if selctedItem == 1 {
-                    Text("2")
+                    MegaWalletNFTRootView(NFTAsset: store.appState.NFTAsset.NFTAssetImage)
                 }
                 if selctedItem == 2 {
-                    Text("3")
+                    MegaWalletOpenSeaRootView()
                 }
                 Spacer()
             }

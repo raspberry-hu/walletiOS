@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 import UIKit
 
+@available(iOS 15.0, *)
 @objc
 class MEGAMintNodeInterface: NSObject, MEGARequestDelegate, ObservableObject {
     private var nodesToExportCount = 1

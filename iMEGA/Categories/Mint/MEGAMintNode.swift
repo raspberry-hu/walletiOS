@@ -9,6 +9,8 @@
 import SwiftUI
 import Combine
 
+@available(iOS 15.0, *)
+@available(iOSApplicationExtension 15.0, *)
 struct MEGAMintNode: View {
     @EnvironmentObject var mintModel: MintModel
     var body: some View {
@@ -52,11 +54,24 @@ struct MEGAMintNode: View {
                 }
             }
             Button {
-                print("this a button")
+                Task {
+                    await mintModel.NFTMintRequest()
+                }
             } label: {
                 Text("Mint")
+                    .frame(width: UIScreen.screenWidth * 0.9 , height: UIScreen.screenWidth * 0.1, alignment: .center)
+                    .foregroundColor(.white)
+                    .background(Color("00C29A"))
+                    .cornerRadius(10)
+                    .padding(.leading, UIScreen.screenWidth * 0.05)
             }
             .buttonStyle(MintButtonStyle())
+            .alert(isPresented: self.$mintModel.mintSuccess) {
+                Alert(title: Text("MegaWallet"), message: Text("Mint Success"), dismissButton: .default(Text("OK")))
+            }
+            .alert(isPresented: self.$mintModel.mintFail) {
+                Alert(title: Text("MegaWallet"), message: Text("Mint Fail"), dismissButton: .default(Text("OK")))
+            }
         }
     }
 }

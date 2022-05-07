@@ -8,11 +8,13 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
 struct WalletRootView: View {
     @EnvironmentObject var web3Model: Web3Model
+    @EnvironmentObject var store: Store
     var body: some View {
         TabView {
-            NFTAssetView().environmentObject(web3Model)
+            NFTAssetView().environmentObject(web3Model).environmentObject(store)
                 .tabItem {
                     Image(systemName: "bitcoinsign.square")
                     Text("NFT Asset")
