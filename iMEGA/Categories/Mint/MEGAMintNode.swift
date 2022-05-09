@@ -41,6 +41,18 @@ struct MEGAMintNode: View {
                     }
                 }
                 Section {
+                    Picker(selection: $mintModel.mintCollectionArray) {
+                        ForEach(0..<self.mintModel.mintCollectionCount) {
+                            Text(self.mintModel.mintCollectionArray[$0])
+                        }
+                    } label: {
+                        Text("Collection")
+                    }
+                    .pickerStyle(.menu)
+                } header: {
+                    Text("Select Collection")
+                }
+                Section {
                     Picker(selection: $mintModel.selectedChain) {
                         ForEach(0..<self.mintModel.chain.count) {
                             Text(self.mintModel.chain[$0])
@@ -55,7 +67,8 @@ struct MEGAMintNode: View {
             }
             Button {
                 Task {
-                    await mintModel.NFTMintRequest()
+//                    await mintModel.NFTMintRequest()
+                    await mintModel.NFTUpdateCollection()
                 }
             } label: {
                 Text("Mint")
@@ -65,13 +78,15 @@ struct MEGAMintNode: View {
                     .cornerRadius(10)
                     .padding(.leading, UIScreen.screenWidth * 0.05)
             }
-            .buttonStyle(MintButtonStyle())
             .alert(isPresented: self.$mintModel.mintSuccess) {
                 Alert(title: Text("MegaWallet"), message: Text("Mint Success"), dismissButton: .default(Text("OK")))
             }
             .alert(isPresented: self.$mintModel.mintFail) {
                 Alert(title: Text("MegaWallet"), message: Text("Mint Fail"), dismissButton: .default(Text("OK")))
             }
+        }
+        .onLoad {
+            self.mintModel.NFTUpdateCollection()
         }
     }
 }

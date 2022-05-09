@@ -22,7 +22,7 @@ struct NFTAssetTypeChangeRequest {
     
     private func NFTAssetTypeChangePublisher(_ temp: String, _ tokenId: String) -> Future<NFTAssetTypeChangeResponse, Error>  {
         return Future<NFTAssetTypeChangeResponse, Error> { promise in
-            let url = URL(string: "http://47.251.8.183:8090/api/updatetype?type=\(temp)&tokenId=\(tokenId)")!
+            let url = URL(string: "http://47.254.43.21:8090/api/updatetype?type=\(temp)&tokenId=\(tokenId)")!
             let request = AF.request(url, method: .get, requestModifier: {$0.timeoutInterval = 180})
             let queue = DispatchQueue(label: "JSONQueue", attributes: .concurrent)
             request.validate()

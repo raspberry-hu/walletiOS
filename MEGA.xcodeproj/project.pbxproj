@@ -1118,19 +1118,7 @@
 		858CE84C28193E1500BBB993 /* walletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7AD28193E1400BBB993 /* walletView.swift */; };
 		858CE86128193E1500BBB993 /* DSCDriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE7B128193E1400BBB993 /* DSCDriveView.swift */; };
 		858CE86B2819730F00BBB993 /* MEGAMintNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE86A2819730F00BBB993 /* MEGAMintNode.swift */; };
-		858CE86C2819730F00BBB993 /* MEGAMintNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE86A2819730F00BBB993 /* MEGAMintNode.swift */; };
-		858CE86D2819730F00BBB993 /* MEGAMintNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE86A2819730F00BBB993 /* MEGAMintNode.swift */; };
-		858CE86E2819730F00BBB993 /* MEGAMintNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE86A2819730F00BBB993 /* MEGAMintNode.swift */; };
-		858CE86F2819730F00BBB993 /* MEGAMintNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE86A2819730F00BBB993 /* MEGAMintNode.swift */; };
-		858CE8702819730F00BBB993 /* MEGAMintNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE86A2819730F00BBB993 /* MEGAMintNode.swift */; };
-		858CE8712819730F00BBB993 /* MEGAMintNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE86A2819730F00BBB993 /* MEGAMintNode.swift */; };
 		858CE8732819734300BBB993 /* MintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8722819734300BBB993 /* MintModel.swift */; };
-		858CE8742819734300BBB993 /* MintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8722819734300BBB993 /* MintModel.swift */; };
-		858CE8752819734300BBB993 /* MintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8722819734300BBB993 /* MintModel.swift */; };
-		858CE8762819734300BBB993 /* MintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8722819734300BBB993 /* MintModel.swift */; };
-		858CE8772819734300BBB993 /* MintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8722819734300BBB993 /* MintModel.swift */; };
-		858CE8782819734300BBB993 /* MintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8722819734300BBB993 /* MintModel.swift */; };
-		858CE8792819734300BBB993 /* MintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE8722819734300BBB993 /* MintModel.swift */; };
 		858CE88B281974F500BBB993 /* MEGAMintNodeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE88A281974F500BBB993 /* MEGAMintNodeInterface.swift */; };
 		858CE898281A78F000BBB993 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE897281A78F000BBB993 /* UIScreen.swift */; };
 		858CE89A281A792800BBB993 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858CE899281A792800BBB993 /* ButtonStyle.swift */; };
@@ -13399,14 +13387,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				858CE86F2819730F00BBB993 /* MEGAMintNode.swift in Sources */,
 				858CE89E281A7AEE00BBB993 /* ButtonStyle.swift in Sources */,
 				7794AEDF231E54120039C1D2 /* MEGASdkManager.m in Sources */,
 				774941E02410EAE000FC5CB6 /* MOMediaDestination+CoreDataClass.m in Sources */,
 				774941E32410EAFB00FC5CB6 /* MOOfflineFolderLayout+CoreDataClass.m in Sources */,
 				774941DB240FF69800FC5CB6 /* MEGAStore.m in Sources */,
 				858CE8A4281A7B3600BBB993 /* UIScreen.swift in Sources */,
-				858CE8772819734300BBB993 /* MintModel.swift in Sources */,
 				B699016F262F91D200176FFC /* UncaughtExceptionHandler.swift in Sources */,
 				5B205D1B2449AD3200EFFC31 /* MEGAChatGenericRequestDelegate.m in Sources */,
 				77B9FEE723C604260002D0CD /* MEGAChatBaseRequestDelegate.m in Sources */,
@@ -13493,7 +13479,6 @@
 				8318CE8E2562DA0600C97779 /* ShortcutsWidget.swift in Sources */,
 				8359E4B325F0E1DF0023FE18 /* QuickAccessWidgetAction.swift in Sources */,
 				B6730B0F27361BEC00A9CF5F /* MVVM-R.swift in Sources */,
-				858CE8782819734300BBB993 /* MintModel.swift in Sources */,
 				836924C5258269B000658F6C /* NSFileManager+MNZCategory.m in Sources */,
 				BF22BFB9268ACFB000460DB3 /* TransferRecordDTO.swift in Sources */,
 				B6990178262F920800176FFC /* UncaughtExceptionHandler.swift in Sources */,
@@ -13508,7 +13493,6 @@
 				8361086325AF156800CAC6E1 /* MEGALogger.m in Sources */,
 				858CE89F281A7AF400BBB993 /* ButtonStyle.swift in Sources */,
 				83E3454F25B58DDC006F2AD6 /* QuickAccessWidgetRecentItem+CoreDataProperties.swift in Sources */,
-				858CE8702819730F00BBB993 /* MEGAMintNode.swift in Sources */,
 				83655AC32593855F001A0846 /* MOUploadTransfer+CoreDataClass.m in Sources */,
 				8375B75425EFC77D00B70F6B /* RecentsQuickAccessWidget.swift in Sources */,
 				83344F4F258A1BD00052DB3C /* AuthUseCase.swift in Sources */,
@@ -13552,9 +13536,7 @@
 				B5300AF72754A0AA001E516B /* Strings+Generated.swift in Sources */,
 				858CE8A6281A7B3700BBB993 /* UIScreen.swift in Sources */,
 				831B497C256FF2580086002B /* ShortcutDetail.swift in Sources */,
-				858CE8712819730F00BBB993 /* MEGAMintNode.swift in Sources */,
 				B5925B8F279119E400170CD6 /* Colors+Generated.swift in Sources */,
-				858CE8792819734300BBB993 /* MintModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -13589,7 +13571,6 @@
 				83B906BE249A29EC0088F15C /* UIButton+Additions.swift in Sources */,
 				C4EACA9C2772559E00C6ACA3 /* MyChatFilesFolderNodeAccess.swift in Sources */,
 				5BE689932417CC2100462134 /* SelectableTableViewCell.m in Sources */,
-				858CE86C2819730F00BBB993 /* MEGAMintNode.swift in Sources */,
 				A82F8A3921C3E34F0045AF1D /* UIApplication+MNZCategory.m in Sources */,
 				B5925B8A279119E400170CD6 /* Colors+Generated.swift in Sources */,
 				B695B603264B43160050DF09 /* SVProgressAnimatedView.m in Sources */,
@@ -13673,7 +13654,6 @@
 				832F19EF2091BD980067679E /* MOMediaDestination+CoreDataClass.m in Sources */,
 				945605401EDD65400094EF0F /* BrowserViewController.m in Sources */,
 				BF6E8F6425C0C768003A125A /* MEGANode+Additions.swift in Sources */,
-				858CE8742819734300BBB993 /* MintModel.swift in Sources */,
 				943229231EDD845E007DB542 /* MEGAStore.m in Sources */,
 				5B2E78CE1FA0C3450096C9BE /* MEGACreateFolderRequestDelegate.m in Sources */,
 				94624CFD1F50517700D52504 /* MEGAExportRequestDelegate.m in Sources */,
@@ -13696,9 +13676,7 @@
 				944DF2BC1EF9379E007798DD /* MEGALogger.m in Sources */,
 				B60D527625F8888F003E9829 /* UIDevice+MNZCategory.m in Sources */,
 				B5300AF32754A098001E516B /* Strings+Generated.swift in Sources */,
-				858CE8752819734300BBB993 /* MintModel.swift in Sources */,
 				B6451650223201A2001680BC /* MEGAConstants.m in Sources */,
-				858CE86D2819730F00BBB993 /* MEGAMintNode.swift in Sources */,
 				77F3C30621C15A5B0049A1BA /* NSFileManager+MNZCategory.m in Sources */,
 				B53BDBEA27619170001D73F8 /* XCAssets+Generated.swift in Sources */,
 				858CE89C281A7AED00BBB993 /* ButtonStyle.swift in Sources */,
@@ -13782,7 +13760,6 @@
 				BF943EA62355449B001C18E0 /* ChatNotificationControl.swift in Sources */,
 				A81F2C6A1F334FB2008600A5 /* MEGAProcessAsset.m in Sources */,
 				A8F0A1DC2178B43300575C57 /* MOMessage+CoreDataClass.m in Sources */,
-				858CE86E2819730F00BBB993 /* MEGAMintNode.swift in Sources */,
 				943F8B281EF283D300AFD89F /* UIDevice+MNZCategory.m in Sources */,
 				77F0522122CB8BA800032138 /* MEGAGenericRequestDelegate.m in Sources */,
 				A836581B21020FB9005E616F /* ItemListViewController.m in Sources */,
@@ -13871,7 +13848,6 @@
 				83337CAC2100B33D000F40A7 /* ItemListModel.m in Sources */,
 				BF943E9023553F11001C18E0 /* DNDTurnOnOption.swift in Sources */,
 				949CEACF1F05121D00A3A580 /* LoginRequiredViewController.m in Sources */,
-				858CE8762819734300BBB993 /* MintModel.swift in Sources */,
 				832F19EE2091BD8E0067679E /* MOMediaDestination+CoreDataProperties.m in Sources */,
 				83B841672051905E00E5AC69 /* MEGAGetThumbnailRequestDelegate.m in Sources */,
 				B6F8CE17262823240074CBBF /* CoreDataErrorHandler.m in Sources */,

@@ -23,7 +23,7 @@ struct MegaWalletNFTDetailSheet: View {
     let tokenId: String
     var body: some View{
         var _: [String] = [nftName, description, image, externalLink, inputArr, mintNum, walletAddress]
-        NavigationView {
+//        NavigationView {
         HStack{
             VStack(alignment: .center, spacing: 10) {
                 VStack(alignment: .leading, spacing: 10){
@@ -95,7 +95,7 @@ struct MegaWalletNFTDetailSheet: View {
             .padding()
             }
             .ignoresSafeArea()
-        }
+//        }
         .onAppear {
             self.store.dispatch(
                 .NFTEventGet(postContent: NFTGetEventsRequest(assetContractAddress: "0x258072A823f55e9a7Ea242E6Bc6762444df15192", accountAddress: "", tokenId: Int(self.tokenId)!, limit: "", onlyOpensea: "", eventType: "", auctionType: ""))

@@ -23,7 +23,7 @@ struct AssetImageSheet: View{
     let tokenId: String
     var body: some View{
         var _: [String] = [nftName, description, image, externalLink, inputArr, mintNum, walletAddress]
-        NavigationView {
+//        NavigationView {
         HStack{
             VStack(alignment: .leading, spacing: 10){
                 HStack {
@@ -64,7 +64,7 @@ struct AssetImageSheet: View{
                 }
                 HStack {
                     NavigationLink(
-                        destination: MegaNFTSellView(tokenId: tokenId)
+                        destination: MegaNFTSellView(tokenId: tokenId).environmentObject(store).ignoresSafeArea()
                             .toolbar {
                                 ToolbarItem(placement: .navigationBarTrailing) {
                                     Button {
@@ -74,7 +74,7 @@ struct AssetImageSheet: View{
                                         )
                                     } label: {
                                         Text("完成")
-                                            .foregroundColor(Color("MegaWalletCreateColorGreen"))
+                                            .foregroundColor(Color("00C29A"))
                                     }
                                 }
                             }
@@ -83,12 +83,12 @@ struct AssetImageSheet: View{
                             .font(.title3)
                             .foregroundColor(.white)
                             .padding()
-                            .background(Color("MegaWalletCreateColorGreen"))
+                            .background(Color("00C29A"))
                             .cornerRadius(5)
                     }
                     Spacer()
                     NavigationLink(
-                        destination: MegaNFTAuctionView(tokenId: tokenId)
+                        destination: MegaNFTAuctionView(tokenId: tokenId).environmentObject(store).ignoresSafeArea()
                             .toolbar {
                                 ToolbarItem(placement: .navigationBarTrailing) {
                                     Button {
@@ -105,7 +105,7 @@ struct AssetImageSheet: View{
                                         }
                                     } label: {
                                         Text("完成")
-                                            .foregroundColor(Color("MegaWalletCreateColorGreen"))
+                                            .foregroundColor(Color("00C29A"))
                                     }
                                 }
                             }
@@ -114,13 +114,13 @@ struct AssetImageSheet: View{
                             .font(.title3)
                             .foregroundColor(.white)
                             .padding()
-                            .background(Color("MegaWalletCreateColorGreen"))
+                            .background(Color("00C29A"))
                             .cornerRadius(5)
                     }
 
                     Spacer()
                     NavigationLink(
-                        destination: MegaNFTBundleView(tokenId: tokenId)
+                        destination: MegaNFTBundleView(tokenId: tokenId).environmentObject(store).ignoresSafeArea()
                             .toolbar {
                                 ToolbarItem(placement: .navigationBarTrailing) {
                                     Button {
@@ -130,7 +130,7 @@ struct AssetImageSheet: View{
                                         )
                                     } label: {
                                         Text("完成")
-                                            .foregroundColor(Color("MegaWalletCreateColorGreen"))
+                                            .foregroundColor(Color("00C29A"))
                                     }
                                 }
                             }
@@ -139,7 +139,7 @@ struct AssetImageSheet: View{
                             .font(.title3)
                             .foregroundColor(.white)
                             .padding()
-                            .background(Color("MegaWalletCreateColorGreen"))
+                            .background(Color("00C29A"))
                             .cornerRadius(5)
                         }
                     }
@@ -159,7 +159,8 @@ struct AssetImageSheet: View{
             store.appState.NFTSell.NFTSellPrice = ""
         })
         .ignoresSafeArea()
-        }
+//        }
+//        .ignoresSafeArea()
     }
 }
 

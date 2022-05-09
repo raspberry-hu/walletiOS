@@ -26,8 +26,10 @@ struct MegaWalletNFTDetailImage: View {
                     .cornerRadius(20)
                     .shadow(radius: 5)
                     .onTapGesture {
-                        SheetKit().present(with: .bottomSheet) {
-                            MegaWalletNFTDetailSheet(nftName: test[i].NFTName, description: test[i].description, image: test[i].imageUrl, externalLink: test[i].descriptionLink, inputArr: test[i].set, mintNum: test[i].number, walletAddress: test[i].walletAddress, tokenId: String(test[i].tokenID)).environmentObject(self.store)
+                        SheetKit().present(with: .sheet) {
+                            NavigationView {
+                                MegaWalletNFTDetailSheet(nftName: test[i].NFTName, description: test[i].description, image: test[i].imageUrl, externalLink: test[i].descriptionLink, inputArr: test[i].set, mintNum: test[i].number, walletAddress: test[i].walletAddress, tokenId: String(test[i].tokenID)).environmentObject(self.store).navigationBarTitleDisplayMode(.inline)
+                            }
                         }
                     }
                 Text(test[i].NFTName)
@@ -45,8 +47,10 @@ struct MegaWalletNFTDetailImage: View {
                         .cornerRadius(20)
                         .shadow(radius: 5)
                         .onTapGesture {
-                            SheetKit().present(with: .bottomSheet) {
-                                MegaWalletNFTDetailSheet(nftName: test[temp].NFTName, description: test[temp].description, image: test[temp].imageUrl, externalLink: test[temp].descriptionLink, inputArr: test[temp].set, mintNum: test[temp].number, walletAddress: test[temp].walletAddress, tokenId: String(test[temp].tokenID)).environmentObject(self.store)
+                            SheetKit().present(with: .sheet) {
+                                NavigationView {
+                                    MegaWalletNFTDetailSheet(nftName: test[temp].NFTName, description: test[temp].description, image: test[temp].imageUrl, externalLink: test[temp].descriptionLink, inputArr: test[temp].set, mintNum: test[temp].number, walletAddress: test[temp].walletAddress, tokenId: String(test[temp].tokenID)).environmentObject(self.store).navigationBarTitleDisplayMode(.inline)
+                                }
                             }
                         }
                     Text(test[temp].NFTName)

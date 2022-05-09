@@ -21,7 +21,7 @@ struct NFTAssetRequest {
     
     private func NFTAssetPublisher(_ address: String) -> Future<NFTGetAssetImageArrayResponse, Error>  {
         return Future<NFTGetAssetImageArrayResponse, Error> { promise in
-            let url = URL(string: "http://47.251.8.183:8090/api/detailList/\(address)")!
+            let url = URL(string: "http://47.254.43.21:8090/api/detailList/\(address)")!
             let request = AF.request(url, method: .get, requestModifier: {$0.timeoutInterval = 180})
             let queue = DispatchQueue(label: "JSONQueue", attributes: .concurrent)
             request.validate()
@@ -54,7 +54,7 @@ struct NFTAssetRequestDetail {
     
     private func NFTAssetPublisher(_ address: String) -> Future<NFTGetAssetImageArrayResponse, Error>  {
         return Future<NFTGetAssetImageArrayResponse, Error> { promise in
-            let url = URL(string: "http://47.251.8.183:8090/api/checktype?type=\(number)&address=\(address)")!
+            let url = URL(string: "http://47.254.43.21:8090/api/checktype?type=\(number)&address=\(address)")!
             let request = AF.request(url, method: .get, requestModifier: {$0.timeoutInterval = 180})
             let queue = DispatchQueue(label: "JSONQueue", attributes: .concurrent)
             request.validate()

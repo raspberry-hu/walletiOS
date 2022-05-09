@@ -84,7 +84,7 @@ struct NFTCastRequestLoad {
     
     private func NFTCastPublisher(_ postContent: NFTCastRequest) -> Future<[String], Error>  {
         return Future<[String], Error> { promise in
-            let url = URL(string: "http://47.251.8.183:8655/api/mint")!
+            let url = URL(string: "http://47.254.43.21:8655/api/mint")!
             let request = AF.request(url, method: .post, parameters: postContent, requestModifier: {$0.timeoutInterval = 180})
             let queue = DispatchQueue(label: "JSONQueue", attributes: .concurrent)
             request.validate()

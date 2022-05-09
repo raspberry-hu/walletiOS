@@ -16,7 +16,7 @@ struct MegaWalletOpenSeaRootView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             if NFTAssetDeatilSell != nil {
-                NavigationLink(destination: MegaNFTOpenSeaAssetEventView(NFTAsset: NFTAssetDeatilSell, sellTemp: 1)) {
+                NavigationLink(destination: MegaNFTOpenSeaAssetEventView(NFTAsset: NFTAssetDeatilSell, sellTemp: 1).environmentObject(store).navigationBarTitleDisplayMode(.inline)) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 15)
                             .fill(Color.white.opacity(1))
@@ -36,7 +36,7 @@ struct MegaWalletOpenSeaRootView: View {
                         .frame(minWidth: 0, maxWidth: UIScreen.screenWidth - 40, minHeight: 0, maxHeight: 60)
                     }
                 }
-                NavigationLink(destination: MegaNFTOpenSeaAssetEventView(NFTAsset: NFTAssetDeatilSell, sellTemp: 2)) {
+                NavigationLink(destination: MegaNFTOpenSeaAssetEventView(NFTAsset: NFTAssetDeatilSell, sellTemp: 2).environmentObject(store).navigationBarTitleDisplayMode(.inline)) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 15)
                             .fill(Color.white.opacity(1))
@@ -56,7 +56,7 @@ struct MegaWalletOpenSeaRootView: View {
                         .frame(minWidth: 0, maxWidth: UIScreen.screenWidth - 40, minHeight: 0, maxHeight: 60)
                     }
                 }
-                NavigationLink(destination: MegaNFTOpenSeaAssetEventView(NFTAsset: NFTAssetDeatilSell, sellTemp: 3)) {
+                NavigationLink(destination: MegaNFTOpenSeaAssetEventView(NFTAsset: NFTAssetDeatilSell, sellTemp: 3).environmentObject(store).navigationBarTitleDisplayMode(.inline)) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 15)
                             .fill(Color.white.opacity(1))
@@ -152,17 +152,14 @@ struct MegaWalletOpenSeaRootView: View {
 //                .NFTAssetDetailGet(address: "0x6a22409c4e1df5fce2ec74a5b70d222723e83066", number: String(3))
 //            )
 //            self.NFTAssetDeatilBundle = store.appState.NFTAssetDetail.NFTAssetImage
+//            self.store.dispatch(
+//                .NFTAssetGet(address: UserDefaults.standard.string(forKey: "walletNowAddress")!)
+//            )
             self.store.dispatch(
-                .NFTAssetGet(address: UserDefaults.standard.string(forKey: "walletNowAddress")!)
+                .NFTAssetGet(address: "0x6a22409c4e1df5fce2ec74a5b70d222723e83066")
             )
             self.NFTAssetDeatilSell = store.appState.NFTAsset.NFTAssetImage
             print("appear更新成功")
         }
-    }
-}
-
-struct MegaWalletOpenSeaRootView_Previews: PreviewProvider {
-    static var previews: some View {
-        MegaWalletOpenSeaRootView()
     }
 }

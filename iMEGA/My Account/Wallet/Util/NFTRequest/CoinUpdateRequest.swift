@@ -42,7 +42,7 @@ struct CoinUpdateRequest {
             DispatchQueue.global().asyncAfter(deadline: .now() + 8) {
                 let url = URL(string: "https://data.mifengcha.com/api/v3/price")!
                 let stringName = name.joined(separator: ",")
-                let postContent = CoinRequestPara(api: "2ELUFUKQJZJGTZIMWSGO5ZAAY1HCIZYSWKI2ACKT", name: stringName)
+                let postContent = CoinRequestPara(api: "O5K33BPHND3BENIQFMRBNWEVA3KUDBMEVXKSL5YD", name: stringName)
                 print("打印参数\(postContent)")
                 let request = AF.request(url, method: .get, parameters: postContent, requestModifier: {$0.timeoutInterval = 180})
                 let queue = DispatchQueue(label: "JSONQueue", attributes: .concurrent)

@@ -20,7 +20,7 @@ struct NFTEventRequestState {
     private func NFTEventRequest(_ NFTSellRequest: NFTGetEventsRequest) -> Future<NFTEventResponse, Error>{
         return Future<NFTEventResponse, Error> { promise in
             DispatchQueue.global().asyncAfter(deadline: .now() + 1.5) {
-            let url = URL(string: "http://47.251.8.183:8655/api/getEvents")!
+            let url = URL(string: "http://47.254.43.21:8655/api/getEvents")!
             let request = AF.request(url, method: .post, parameters: NFTSellRequest, requestModifier: {$0.timeoutInterval = 180})
             let queue = DispatchQueue(label: "JSONQueue", attributes: .concurrent)
             request.validate()

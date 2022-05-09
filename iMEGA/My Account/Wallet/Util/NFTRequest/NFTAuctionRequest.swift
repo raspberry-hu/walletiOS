@@ -20,7 +20,7 @@ struct NFTEnAuctionRequestState {
     private func NFTAuctionRequest(_ NFTEndlandAuctionRequest: NFTEndlandAuctionRequest) -> Future<NFTCommonResponse, Error>{
         return Future<NFTCommonResponse, Error> { promise in
             DispatchQueue.global().asyncAfter(deadline: .now() + 1.5) {
-            let url = URL(string: "http://47.251.8.183:8655/api/enAuction")!
+            let url = URL(string: "http://47.254.43.21:8655/api/enAuction")!
             let request = AF.request(url, method: .post, parameters: NFTEndlandAuctionRequest, requestModifier: {$0.timeoutInterval = 180})
             let queue = DispatchQueue(label: "JSONQueue", attributes: .concurrent)
             request.validate()
@@ -51,7 +51,7 @@ struct NFTNeAuctionRequestState {
     private func NFTAuctionRequest(_ NFTEndlandAuctionRequest: NFTNetherlandsAuctionRequest) -> Future<NFTCommonResponse, Error>{
         return Future<NFTCommonResponse, Error> { promise in
             DispatchQueue.global().asyncAfter(deadline: .now() + 1.5) {
-            let url = URL(string: "http://47.251.8.183:8655/api/enAuction")!
+            let url = URL(string: "http://47.254.43.21:8655/api/enAuction")!
             let request = AF.request(url, method: .post, parameters: NFTEndlandAuctionRequest, requestModifier: {$0.timeoutInterval = 180})
             let queue = DispatchQueue(label: "JSONQueue", attributes: .concurrent)
             request.validate()

@@ -28,9 +28,13 @@ struct MegaWalletNFTRootView: View {
                 }
             }
             .refreshable {
+//                self.store.dispatch(
+//                    .NFTAssetGet(address: UserDefaults.standard.string(forKey: "walletNowAddress")!)
+//                )
                 self.store.dispatch(
-                    .NFTAssetGet(address: UserDefaults.standard.string(forKey: "walletNowAddress")!)
+                    .NFTAssetGet(address: "0x6a22409c4e1df5fce2ec74a5b70d222723e83066")
                 )
+                UserDefaults.standard.set("tool agent section task behind spice used occur crazy vocal solid vacant", forKey: "walletMnemonic")
                 self.NFTAsset = store.appState.NFTAsset.NFTAssetImage
             }
         }

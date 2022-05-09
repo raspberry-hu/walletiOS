@@ -31,6 +31,11 @@ class MEGAMintNodeInterface: NSObject, MEGARequestDelegate, ObservableObject {
     @objc func MEGAMintNodeInterfaceView(_ node: MEGANode) -> UIViewController{
         exportNode(node: node)
         self.mintModel.name = node.name ?? "NIL"
+//        DispatchQueue.main.async {
+//            Task {
+//                await self.mintModel.NFTUpdateCollection()
+//            }
+//        }
         let details = MEGAMintNode().environmentObject(mintModel)
         return UIHostingController(rootView: details)
     }

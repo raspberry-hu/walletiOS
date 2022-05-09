@@ -40,7 +40,7 @@ struct MegaNFTSellView: View {
                 .cornerRadius(10)
             if store.appState.NFTSell.url != "" {
                 Text(store.appState.NFTSell.url)
-                Link("OpenSea资产页面", destination: URL(string: store.appState.NFTSell.url)!)
+//                Link("OpenSea资产页面", destination: URL(string: store.appState.NFTSell.url)!)
             }
             Spacer()
         }

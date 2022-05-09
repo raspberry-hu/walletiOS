@@ -26,7 +26,7 @@ struct CoinDeatilUpdateRequest {
             
             DispatchQueue.global().asyncAfter(deadline: .now() + 1.5) {
             let url = URL(string: "https://data.mifengcha.com/api/v3/symbols/\(coinName)")!
-            let postContent = CoinDeatilRequestPara(api: "2ELUFUKQJZJGTZIMWSGO5ZAAY1HCIZYSWKI2ACKT")
+            let postContent = CoinDeatilRequestPara(api: "O5K33BPHND3BENIQFMRBNWEVA3KUDBMEVXKSL5YD")
             let request = AF.request(url, method: .get, parameters: postContent, requestModifier: {$0.timeoutInterval = 180})
             let queue = DispatchQueue(label: "JSONQueue", attributes: .concurrent)
             request.validate()
