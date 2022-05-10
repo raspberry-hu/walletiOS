@@ -13,6 +13,7 @@ import Combine
 @available(iOSApplicationExtension 15.0, *)
 struct MEGAMintNode: View {
     @EnvironmentObject var mintModel: MintModel
+    @State var showCollection = false
     var body: some View {
         VStack {
             Form {
@@ -34,23 +35,24 @@ struct MEGAMintNode: View {
                 Section {
                     TextField("Mint Description", text: self.$mintModel.mintdescription)
                     TextField("Mint External Link", text: self.$mintModel.externalLink)
-                    TextField("Mint Collection", text: self.$mintModel.mintCollection)
                 } header: {
                     HStack{
                         Text("Mint Message")
                     }
                 }
-                Section {
-                    Picker(selection: $mintModel.mintCollectionArray) {
-                        ForEach(0..<self.mintModel.mintCollectionCount) {
-                            Text(self.mintModel.mintCollectionArray[$0])
+                if(showCollection) {
+                    Section {
+                        Picker(selection: $mintModel.mintCollectionCount) {
+                            ForEach(0..<self.mintModel.mintCollectionCount) {
+                                Text(self.mintModel.mintCollectionArray[$0])
+                            }
+                        } label: {
+                            Text("Collection")
                         }
-                    } label: {
-                        Text("Collection")
+                        .pickerStyle(.menu)
+                    } header: {
+                        Text("Select Collection")
                     }
-                    .pickerStyle(.menu)
-                } header: {
-                    Text("Select Collection")
                 }
                 Section {
                     Picker(selection: $mintModel.selectedChain) {
@@ -67,8 +69,8 @@ struct MEGAMintNode: View {
             }
             Button {
                 Task {
-//                    await mintModel.NFTMintRequest()
-                    await mintModel.NFTUpdateCollection()
+                    await mintModel.NFTMintRequest()
+//                    await mintModel.NFTUpdateCollection()
                 }
             } label: {
                 Text("Mint")
@@ -86,7 +88,10 @@ struct MEGAMintNode: View {
             }
         }
         .onLoad {
-            self.mintModel.NFTUpdateCollection()
+            Task {
+                await self.mintModel.NFTUpdateCollection()
+                showCollection = true
+            }
         }
     }
 }
