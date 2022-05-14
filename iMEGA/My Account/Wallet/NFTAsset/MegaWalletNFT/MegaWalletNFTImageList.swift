@@ -31,6 +31,7 @@ struct MegaWalletNFTImageList: View {
                             NavigationView {
                                 AssetImageSheet(nftName: test[i].NFTName, description: test[i].description, image: test[i].imageUrl, externalLink: test[i].descriptionLink, inputArr: test[i].set, mintNum: test[i].number, walletAddress: test[i].walletAddress, tokenId: String(test[i].tokenID)).environmentObject(self.store).navigationBarTitleDisplayMode(.inline)
                             }
+//                            .padding()
 //                            .ignoresSafeArea()
                         }
                         self.presentingSheet = true

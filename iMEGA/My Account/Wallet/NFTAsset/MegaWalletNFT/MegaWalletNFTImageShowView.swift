@@ -38,49 +38,50 @@ struct AssetImageSheet: View{
                     Spacer()
                 }
                 VStack(alignment: .leading, spacing: 3){
-                    Text("详情描述")
+                    Text("Description")
                     Text(description)
                         .font(.footnote)
                 }
                 VStack(alignment: .leading, spacing: 3){
-                    Text("详情链接")
+                    Text("ExternalLink")
                     Text(externalLink)
                         .font(.footnote)
                 }
                 VStack(alignment: .leading, spacing: 3){
-                    Text("所属集合")
+                    Text("Collection")
                     Text(inputArr)
                         .font(.footnote)
                 }
                 VStack(alignment: .leading, spacing: 3){
-                    Text("铸造个数")
+                    Text("MintCount")
                     Text(mintNum)
                         .font(.footnote)
                 }
                 VStack(alignment: .leading, spacing: 3){
-                    Text("钱包地址")
+                    Text("Address")
                     Text(walletAddress)
                         .font(.footnote)
                 }
                 HStack {
                     NavigationLink(
-                        destination: MegaNFTSellView(tokenId: tokenId).environmentObject(store).ignoresSafeArea()
+                        destination: MegaNFTSellView(tokenId: tokenId).environmentObject(store)
                             .toolbar {
                                 ToolbarItem(placement: .navigationBarTrailing) {
                                     Button {
-                                        let postContent = NFTSellRequest(network: "rinkeby", ownerAddress: UserDefaults.standard.string(forKey: "walletAddress")!, myMnemonic: UserDefaults.standard.string(forKey: "walletMnemonic")!, fixPrice: Double(store.appState.NFTSell.NFTSellPrice)!, tokenId: tokenId)
+                                        let postContent = NFTSellRequest(network: "rinkeby", ownerAddress: UserDefaults.standard.string(forKey: "walletNowAddress")!, myMnemonic: UserDefaults.standard.string(forKey: "walletMnemonic")!, fixPrice: Double(store.appState.NFTSell.NFTSellPrice)!, tokenId: tokenId)
                                         self.store.dispatch(
                                             .NFTSellGet(postContent: postContent)
                                         )
                                     } label: {
-                                        Text("完成")
+                                        Text("Finish")
                                             .foregroundColor(Color("00C29A"))
                                     }
                                 }
                             }
                     ) {
-                        Text("定价销售")
+                        Text("Fix Sell")
                             .font(.title3)
+//                            .frame(width: UIScreen.screenWidth * 0.2)
                             .foregroundColor(.white)
                             .padding()
                             .background(Color("00C29A"))
@@ -88,13 +89,13 @@ struct AssetImageSheet: View{
                     }
                     Spacer()
                     NavigationLink(
-                        destination: MegaNFTAuctionView(tokenId: tokenId).environmentObject(store).ignoresSafeArea()
+                        destination: MegaNFTAuctionView(tokenId: tokenId).environmentObject(store)
                             .toolbar {
                                 ToolbarItem(placement: .navigationBarTrailing) {
                                     Button {
-                                        let postEnContent = NFTEndlandAuctionRequest(network: "rinkeby", ownerAddress: UserDefaults.standard.string(forKey: "walletAddress")!, myMnemonic: UserDefaults.standard.string(forKey: "walletMnemonic")!, startPrice: Double(store.appState.NFTAuction.startPrice)!, expirationTime: Int(store.appState.NFTAuction.time.timeIntervalSince1970), tokenId: tokenId)
-                                        let postNeContent = NFTNetherlandsAuctionRequest(network: "rinkeby", ownerAddress: UserDefaults.standard.string(forKey: "walletAddress")!, myMnemonic: UserDefaults.standard.string(forKey: "walletMnemonic")!, startPrice: Double(store.appState.NFTAuction.startPrice)!, endPrice: Double(store.appState.NFTAuction.endPrice)!, expirationTime: Int(store.appState.NFTAuction.time.timeIntervalSince1970), tokenId: tokenId)
-                                        if store.appState.NFTAuction.temp == "英国式拍卖" {
+                                        let postEnContent = NFTEndlandAuctionRequest(network: "rinkeby", ownerAddress: UserDefaults.standard.string(forKey: "walletNowAddress")!, myMnemonic: UserDefaults.standard.string(forKey: "walletMnemonic")!, startPrice: Double(store.appState.NFTAuction.startPrice)!, expirationTime: Int(store.appState.NFTAuction.time.timeIntervalSince1970), tokenId: tokenId)
+                                        let postNeContent = NFTNetherlandsAuctionRequest(network: "rinkeby", ownerAddress: UserDefaults.standard.string(forKey: "walletNowAddress")!, myMnemonic: UserDefaults.standard.string(forKey: "walletMnemonic")!, startPrice: Double(store.appState.NFTAuction.startPrice)!, endPrice: Double(store.appState.NFTAuction.endPrice)!, expirationTime: Int(store.appState.NFTAuction.time.timeIntervalSince1970), tokenId: tokenId)
+                                        if store.appState.NFTAuction.temp == "British Card" {
                                             self.store.dispatch(
                                                 .NFTEnAuctionGet(postContent: postEnContent)
                                             )
@@ -104,14 +105,15 @@ struct AssetImageSheet: View{
                                             )
                                         }
                                     } label: {
-                                        Text("完成")
+                                        Text("Finish")
                                             .foregroundColor(Color("00C29A"))
                                     }
                                 }
                             }
                     ) {
-                        Text("定价拍卖")
+                        Text("Auction Sell")
                             .font(.title3)
+//                            .frame(width: UIScreen.screenWidth * 0.2)
                             .foregroundColor(.white)
                             .padding()
                             .background(Color("00C29A"))
@@ -120,30 +122,31 @@ struct AssetImageSheet: View{
 
                     Spacer()
                     NavigationLink(
-                        destination: MegaNFTBundleView(tokenId: tokenId).environmentObject(store).ignoresSafeArea()
+                        destination: MegaNFTBundleView(tokenId: tokenId).environmentObject(store)
                             .toolbar {
                                 ToolbarItem(placement: .navigationBarTrailing) {
                                     Button {
-                                        let postContent = NFTBundleSellRequest(network: "rinkeby", ownerAddress: UserDefaults.standard.string(forKey: "walletAddress")!, myMnemonic: UserDefaults.standard.string(forKey: "walletMnemonic")!, bundleName: store.appState.NFTBundle.bundleName, bundleDescription: store.appState.NFTBundle.bundleDescription, startPrice: Double(store.appState.NFTBundle.startPrice)!, expirationTime: Int(store.appState.NFTAuction.time.timeIntervalSince1970), tokenId: store.appState.NFTBundle.tokenID)
+                                        let postContent = NFTBundleSellRequest(network: "rinkeby", ownerAddress: UserDefaults.standard.string(forKey: "walletNowAddress")!, myMnemonic: UserDefaults.standard.string(forKey: "walletMnemonic")!, bundleName: store.appState.NFTBundle.bundleName, bundleDescription: store.appState.NFTBundle.bundleDescription, startPrice: Double(store.appState.NFTBundle.startPrice)!, expirationTime: Int(store.appState.NFTAuction.time.timeIntervalSince1970), tokenId: store.appState.NFTBundle.tokenID)
                                         self.store.dispatch(
                                             .NFTBundleGet(postContent: postContent)
                                         )
                                     } label: {
-                                        Text("完成")
+                                        Text("Finish")
                                             .foregroundColor(Color("00C29A"))
                                     }
                                 }
                             }
                     ) {
-                        Text("捆绑销售")
+                        Text("Bundle Sell")
                             .font(.title3)
+//                            .frame(width: UIScreen.screenWidth * 0.25)
                             .foregroundColor(.white)
                             .padding()
                             .background(Color("00C29A"))
                             .cornerRadius(5)
                         }
                     }
-                Spacer()
+//                Spacer()
                 }
             .padding()
             }
@@ -158,8 +161,6 @@ struct AssetImageSheet: View{
             store.appState.NFTSell.url = ""
             store.appState.NFTSell.NFTSellPrice = ""
         })
-        .ignoresSafeArea()
-//        }
 //        .ignoresSafeArea()
     }
 }

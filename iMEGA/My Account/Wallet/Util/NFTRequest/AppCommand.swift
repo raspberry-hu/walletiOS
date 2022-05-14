@@ -189,6 +189,7 @@ struct NFTAssetDetailGetCommand: AppCommand {
                     token.unseal()
                 },
                 receiveValue: { value in
+                    print("二阶段")
                     store.dispatch(.NFTAssetDetailGetDone(result: .success(value)))
                 }
             )

@@ -27,7 +27,7 @@ struct walletSetView: View {
                     Text("Import Wallet")
                 }
                 .frame(height: 45)
-                NavigationLink(destination: walletManageView()) {
+                NavigationLink(destination: walletManageView().environmentObject(web3Model)) {
                     Image("WalletAddress")
                         .resizable()
                         .frame(width: 20, height: 15)

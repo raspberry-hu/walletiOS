@@ -39,27 +39,27 @@ struct MegaWalletNFTDetailSheet: View {
                         Spacer()
                     }
                     VStack(alignment: .leading, spacing: 3){
-                        Text("详情描述")
+                        Text("Description")
                         Text(description)
                             .font(.footnote)
                     }
                     VStack(alignment: .leading, spacing: 3){
-                        Text("详情链接")
+                        Text("ExternalLink")
                         Text(externalLink)
                             .font(.footnote)
                     }
                     VStack(alignment: .leading, spacing: 3){
-                        Text("所属集合")
+                        Text("Collection")
                         Text(inputArr)
                             .font(.footnote)
                     }
                     VStack(alignment: .leading, spacing: 3){
-                        Text("铸造个数")
+                        Text("MintCount")
                         Text(mintNum)
                             .font(.footnote)
                     }
                     VStack(alignment: .leading, spacing: 3){
-                        Text("钱包地址")
+                        Text("Address")
                         Text(walletAddress)
                             .font(.footnote)
                     }
@@ -68,7 +68,7 @@ struct MegaWalletNFTDetailSheet: View {
                     NavigationLink(
                         destination: MegaWalletNFTEventDetailSubView()
                     ) {
-                        Text("查看事件信息")
+                        Text("Event Information")
                             .frame(width: UIScreen.screenWidth * 0.8, height: UIScreen.screenWidth * 0.1,alignment: .center)
                             .font(.title3)
                             .foregroundColor(.white)
@@ -77,7 +77,7 @@ struct MegaWalletNFTDetailSheet: View {
                     }
 
                 } else {
-                    Text("查看事件信息")
+                    Text("Event Information")
 //                        .font(.title3)
 //                        .foregroundColor(.white)
 //                        .background(Color("MegaWalletCreateColorGreen"))

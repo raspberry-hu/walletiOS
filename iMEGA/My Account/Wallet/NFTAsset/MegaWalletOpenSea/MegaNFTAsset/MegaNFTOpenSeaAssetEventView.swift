@@ -16,10 +16,10 @@ var body: some View {
     VStack{
         List{
             if NFTAsset == nil {
-                Text("加载失败,请重新刷新页面")
+                Text("Load Fail")
                     .font(.largeTitle)
             } else if NFTAsset?.count == 0 || NFTAsset?.filter { $0.orderStatus == sellTemp }.count == 0{
-                Text("请先创造您的第一个NFT！")
+                Text("Please Create First NFT")
                     .font(.largeTitle)
             } else {
                 let test = NFTAsset?.filter { $0.orderStatus == sellTemp }

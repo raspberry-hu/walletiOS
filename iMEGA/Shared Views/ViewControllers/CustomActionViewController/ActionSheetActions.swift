@@ -93,7 +93,7 @@ class NodeAction: BaseAction {
 extension NodeAction {
     //NFT铸造Action
     class func NFTMintAction() -> NodeAction {
-        return NodeAction(title: "mint", detail: nil, image: UIImage(named: "mint"), type: .mint)
+        return NodeAction(title: "Mint", detail: nil, image: UIImage(named: "mint"), type: .mint)
     }
     class func exportFileAction() -> NodeAction {
         return NodeAction(title: Strings.Localizable.General.exportFile, detail: nil, image: Asset.Images.NodeActions.export.image, type: .exportFile)

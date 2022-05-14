@@ -17,7 +17,7 @@ struct MegaNFTOpenSeaAssetView: View {
         VStack{
             List{
                 if NFTAsset == nil || NFTAsset?.count == 0{
-                    Text("加载失败,请重新刷新页面")
+                    Text("Load Fail")
                 } else {
                     let test = NFTAsset?.filter { $0.orderStatus == sellTemp }
                     ForEach(0..<(test!.count-1)/2+1){ i in

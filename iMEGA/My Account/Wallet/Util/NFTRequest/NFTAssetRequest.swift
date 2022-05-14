@@ -21,14 +21,14 @@ struct NFTAssetRequest {
     
     private func NFTAssetPublisher(_ address: String) -> Future<NFTGetAssetImageArrayResponse, Error>  {
         return Future<NFTGetAssetImageArrayResponse, Error> { promise in
-            let url = URL(string: "http://47.254.43.21:8090/api/detailList/\(address)")!
+            let url = URL(string: "http://47.254.43.21:8090/api/checktype?type=4&address=0x6a22409c4e1df5fce2ec74a5b70d222723e83066")!
             let request = AF.request(url, method: .get, requestModifier: {$0.timeoutInterval = 180})
             let queue = DispatchQueue(label: "JSONQueue", attributes: .concurrent)
             request.validate()
             request.responseDecodable(queue: queue){ (response: AFDataResponse<NFTGetAssetImageArrayResponse>) in
                 switch response.result {
                 case .success(let model):
-                    print("读取资产请求成功:\(model.code)")
+                    print("读取资产请求成功:\(model)")
                     promise(.success(model))
                     break
                 case .failure(let error):
@@ -61,7 +61,7 @@ struct NFTAssetRequestDetail {
             request.responseDecodable(queue: queue){ (response: AFDataResponse<NFTGetAssetImageArrayResponse>) in
                 switch response.result {
                 case .success(let model):
-                    print("读取资产细分\(number)请求成功:\(model.code)")
+                    print("读取资产细分\(number)请求成功:\(model)")
                     promise(.success(model))
                     break
                 case .failure(let error):

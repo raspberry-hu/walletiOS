@@ -113,7 +113,7 @@ extension AppState {
     struct NFTSell {
         var NFTSellPrice = ""
         var network = "rinkeby"
-        var address = UserDefaults.standard.string(forKey: "walletAddress")
+        var address = UserDefaults.standard.string(forKey: "walletNowAddress")
         var mnemonic = UserDefaults.standard.string(forKey: "walletMnemonic")
         var url = ""
         var createSuccess = false
@@ -123,8 +123,8 @@ extension AppState {
 
 extension AppState {
     struct NFTAuction {
-        var temp = "英国式拍卖"
-        var address = UserDefaults.standard.string(forKey: "walletAddress")
+        var temp = "British Auction"
+        var address = UserDefaults.standard.string(forKey: "walletNowAddress")
         var time = Date()
         var tokenID = "0"
         var startPrice = "0.0"
@@ -139,7 +139,7 @@ extension AppState {
 
 extension AppState {
     struct NFTBundle {
-        var address = UserDefaults.standard.string(forKey: "walletAddress")
+        var address = UserDefaults.standard.string(forKey: "walletNowAddress")
         var time = Date()
         var tokenID = [Int]()
         var bundleName = "0.0"

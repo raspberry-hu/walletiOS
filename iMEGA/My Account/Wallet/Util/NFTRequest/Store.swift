@@ -12,7 +12,9 @@ import Combine
 @available(iOS 14.0, *)
 class Store: ObservableObject {
     @Published var appState = AppState()
-    
+    @Published var NFTAssetDeatilSell: [NFTGetAssetImageResponse]?
+    @Published var NFTAssetDeatilAuction: [NFTGetAssetImageResponse]?
+    @Published var NFTAssetDeatilBundle: [NFTGetAssetImageResponse]?
     func dispatch(_ action: AppAction) {
         #if DEBUG
         print("[ACTION]:\(action)")
@@ -105,6 +107,8 @@ class Store: ObservableObject {
         case .NFTAssetDetailGetDone(let result):
             switch result {
             case .success(let model):
+                print("三阶段")
+                print(model.msg)
                 appState.NFTAssetDetail.NFTAssetImage = model.msg
             case .failure(_):
                 print("获取失败")

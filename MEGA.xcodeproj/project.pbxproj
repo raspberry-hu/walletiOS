@@ -1181,6 +1181,8 @@
 		85988AE42826A83600516F1C /* MegaNFTBundleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85988AE32826A83600516F1C /* MegaNFTBundleView.swift */; };
 		85988AE62826A87300516F1C /* MegaWalletOpenSeaRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85988AE52826A87300516F1C /* MegaWalletOpenSeaRootView.swift */; };
 		85988AE82826AC5C00516F1C /* MegaWalletNFTDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85988AE72826AC5B00516F1C /* MegaWalletNFTDetailSheet.swift */; };
+		85B9451B282A9E460018BB94 /* TTProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 85B9451A282A9E460018BB94 /* TTProgressHUD */; };
+		85B9451F282BA1860018BB94 /* AlertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9451E282BA1860018BB94 /* AlertUtil.swift */; };
 		9411354F1F00FD1500D33428 /* Cloud.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415226691A692ECC00EC7BB6 /* Cloud.storyboard */; };
 		941135501F00FFAB00D33428 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AB8EC01A7103B300E40A39 /* BrowserViewController.m */; };
 		941135521F00FFE400D33428 /* MEGAReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 418072791AA5BBA00078D950 /* MEGAReachabilityManager.m */; };
@@ -3649,6 +3651,7 @@
 		85988AE32826A83600516F1C /* MegaNFTBundleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaNFTBundleView.swift; sourceTree = "<group>"; };
 		85988AE52826A87300516F1C /* MegaWalletOpenSeaRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaWalletOpenSeaRootView.swift; sourceTree = "<group>"; };
 		85988AE72826AC5B00516F1C /* MegaWalletNFTDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaWalletNFTDetailSheet.swift; sourceTree = "<group>"; };
+		85B9451E282BA1860018BB94 /* AlertUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtil.swift; sourceTree = "<group>"; };
 		9419B6C51F20DC5700FEBE31 /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
 		942254DC1EDC03130074C51A /* MEGAPicker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MEGAPicker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		942254EB1EDC03140074C51A /* MEGAPickerFileProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MEGAPickerFileProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -4792,6 +4795,7 @@
 				A8F5157427F6F87A00AEE4D6 /* DZNEmptyDataSet in Frameworks */,
 				A88BFFE91F0A55E20081BCE3 /* libMEGASDK.a in Frameworks */,
 				A88BFFDE1F0A52E90081BCE3 /* libuv.a in Frameworks */,
+				85B9451B282A9E460018BB94 /* TTProgressHUD in Frameworks */,
 				BF0CC97F27FD388700244AEB /* DateToolsObjc in Frameworks */,
 				A811DCB82476C460002FCD98 /* MetalKit.framework in Frameworks */,
 				A82751161E97AB88007CD9E2 /* libstdc++.tbd in Frameworks */,
@@ -8334,6 +8338,7 @@
 				125AD4E6281B7327004EF446 /* AppInfo.swift */,
 				12E75C5A2822329C0032DEFB /* TextView.swift */,
 				85988AC928266D1A00516F1C /* PlistOperator.swift */,
+				85B9451E282BA1860018BB94 /* AlertUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -11117,6 +11122,7 @@
 				85988AB82826024200516F1C /* Alamofire */,
 				85988ABB282602CD00516F1C /* Kingfisher */,
 				85988AC7282668E200516F1C /* SheetKit */,
+				85B9451A282A9E460018BB94 /* TTProgressHUD */,
 			);
 			productName = iMEGA;
 			productReference = 1373618A1A6664C300B740E8 /* MEGA.app */;
@@ -11452,6 +11458,7 @@
 				85988AB72826024200516F1C /* XCRemoteSwiftPackageReference "Alamofire" */,
 				85988ABA282602CD00516F1C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				85988AC6282668E200516F1C /* XCRemoteSwiftPackageReference "SheetKit" */,
+				85B94519282A9E460018BB94 /* XCRemoteSwiftPackageReference "TTProgressHUD" */,
 			);
 			productRefGroup = 1373618B1A6664C300B740E8 /* Products */;
 			projectDirPath = "";
@@ -13029,6 +13036,7 @@
 				B61F01C6220D37A400F4A917 /* DiskSpaceDetector.m in Sources */,
 				5D6D0F5425270357002A777D /* DevicePermissionUseCase.swift in Sources */,
 				B582965A27C5DF50004DD7A5 /* TransfersUseCaseHelper.swift in Sources */,
+				85B9451F282BA1860018BB94 /* AlertUtil.swift in Sources */,
 				5D92DD1724BFE2B200D7D13B /* DateFormatter+SystemDateRelativeFormatter.swift in Sources */,
 				A8A715C226307B0A00DDC8E2 /* UIPasteboard+WebP.swift in Sources */,
 				4180727A1AA5BBA00078D950 /* MEGAReachabilityManager.m in Sources */,
@@ -15379,6 +15387,14 @@
 				minimumVersion = 0.1.0;
 			};
 		};
+		85B94519282A9E460018BB94 /* XCRemoteSwiftPackageReference "TTProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/honkmaster/TTProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.5;
+			};
+		};
 		A8B51ADA27F3534F0030F1EA /* XCRemoteSwiftPackageReference "Haptica" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/efremidze/Haptica";
@@ -15596,6 +15612,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 85988AC6282668E200516F1C /* XCRemoteSwiftPackageReference "SheetKit" */;
 			productName = SheetKit;
+		};
+		85B9451A282A9E460018BB94 /* TTProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B94519282A9E460018BB94 /* XCRemoteSwiftPackageReference "TTProgressHUD" */;
+			productName = TTProgressHUD;
 		};
 		A8B51ADB27F3534F0030F1EA /* Haptica */ = {
 			isa = XCSwiftPackageProductDependency;

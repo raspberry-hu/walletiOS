@@ -19,20 +19,20 @@ struct MegaNFTSellView: View {
     }
     var body: some View {
         VStack(alignment: .leading, spacing: 5){
-            Text("当前地址")
-            Text(UserDefaults.standard.string(forKey: "walletAddress")!)
+            Text("Address")
+            Text(UserDefaults.standard.string(forKey: "walletNowAddress")!)
                 .padding()
                 .background(Color("MegaBackgroundColorGray"))
                 .frame(maxWidth: .infinity)
                 .cornerRadius(10)
-            Text("当前网络")
+            Text("Network")
             Text("rinkeby")
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
                 .background(Color("MegaBackgroundColorGray"))
                 .cornerRadius(10)
-            Text("输入价格")
-            TextField("单行输入", text: MegaNFTSellBinding.NFTSellPrice)
+            Text("Fix Price")
+            TextField("Input", text: MegaNFTSellBinding.NFTSellPrice)
                 .padding()
                 .foregroundColor(Color.gray.opacity(0.8))
                 .frame(maxWidth: .infinity, alignment: .center)
@@ -45,10 +45,10 @@ struct MegaNFTSellView: View {
             Spacer()
         }
         .alert(isPresented: MegaNFTSellBinding.createFail) {
-            Alert(title: Text("出售失败"), message: Text("请检查服务或过一会再试"), dismissButton: .default(Text("OK")))
+            Alert(title: Text("Sell Fail"), message: Text("Please Try Again"), dismissButton: .default(Text("OK")))
         }
         .alert(isPresented: MegaNFTSellBinding.createSuccess) {
-            Alert(title: Text("出售成功"), message: Text(store.appState.NFTSell.url), dismissButton:
+            Alert(title: Text("Sell Success"), message: Text(store.appState.NFTSell.url), dismissButton:
                     Alert.Button.default(
                         Text("OK"), action: {
                             self.store.dispatch(

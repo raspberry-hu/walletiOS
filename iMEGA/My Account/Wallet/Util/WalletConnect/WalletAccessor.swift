@@ -40,7 +40,7 @@ public struct WalletAccessor {
         web3(on: .Ethereum) != nil
     }
     mutating func update() {
-        self.web3 = try? Web3.new((EthNode.Ethereum.url ?? URL(string: "www.baidu.com"))!)
+        self.web3 = try? Web3.new((URL(string: "https://rinkeby.infura.io/v3/f0ed4e15298d4dbba744d8472b0f1f01") ?? URL(string: "www.baidu.com"))!)
         self.polygonWeb3 = try? Web3.new((EthNode.Polygon.url ?? URL(string: "www.baidu.com"))!)
         self.password = "12345678"
         let key = MEGAWalletConstants.cryptoKeychain[string: "privateKey\(Defaults[.walletNowAddress])"] ?? ""
@@ -75,10 +75,10 @@ public struct WalletAccessor {
     
     public var walletMeta: Session.ClientMeta {
         return Session.ClientMeta(
-            name: "Neeva Wallet",
-            description: "Neeva is the world's first ad-free private search engine",
-            icons: [URL(string: "https://neeva.com/apple-touch-icon-180.png")!],
-            url: URL(string: "https://neeva.com")!)
+            name: "MEGAWallet",
+            description: "MEGAWALLET",
+            icons: [URL(string: "https://MEGA.nz")!],
+            url: URL(string: "https://MEGA.nz")!)
     }
     
     public var ethereumAddress: EthereumAddress? {

@@ -21,7 +21,7 @@ struct MegaNFTAuctionView: View {
         $store.appState.NFTAuction
     }
     private let auction = [
-      "英式拍卖","荷式拍卖"
+      "British Card","Dutch Auction"
     ]
     let tokenId: String
 //    @State private var selectedAuction = "英国式拍卖"
@@ -30,19 +30,19 @@ struct MegaNFTAuctionView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 5){
             Group {
-                Text("当前地址")
-                Text(UserDefaults.standard.string(forKey: "walletAddress")!)
+                Text("Address")
+                Text(UserDefaults.standard.string(forKey: "walletNowAddress")!)
                     .padding()
                     .background(Color("MegaBackgroundColorGray"))
                     .frame(maxWidth: .infinity)
                     .cornerRadius(10)
-                Text("当前网络")
+                Text("Network")
                 Text("rinkeby")
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color("MegaBackgroundColorGray"))
                     .cornerRadius(10)
-                Text("选择拍卖方式")
+                Text("Select Auction")
                 Picker(selection: MegaNFTAuctionBinding.temp, label: Text("wallet")) {
                     ForEach(auction, id: \.self) { (string: String) in
                         Text(string)
@@ -57,27 +57,27 @@ struct MegaNFTAuctionView: View {
 //                    .frame(maxWidth: .infinity, alignment: .center)
 //                    .background(Color("MegaBackgroundColorGray"))
 //                    .cornerRadius(10)
-                Text("起拍价格")
-                TextField("单行输入", text: MegaNFTAuctionBinding.startPrice)
+                Text("Starting Price")
+                TextField("Input", text: MegaNFTAuctionBinding.startPrice)
                     .padding()
                     .foregroundColor(Color.gray.opacity(0.8))
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color("MegaBackgroundColorGray"))
                     .cornerRadius(10)
-                if store.appState.NFTAuction.temp != "英国式拍卖" {
-                    Text("结束价格")
-                    TextField("单行输入", text: MegaNFTAuctionBinding.endPrice)
+                if store.appState.NFTAuction.temp != "British Card" {
+                    Text("Ending Price")
+                    TextField("Input", text: MegaNFTAuctionBinding.endPrice)
                         .padding()
                         .foregroundColor(Color.gray.opacity(0.8))
                         .frame(maxWidth: .infinity, alignment: .center)
                         .background(Color("MegaBackgroundColorGray"))
                         .cornerRadius(10)
                 }
-                Text("有效期")
+                Text("Validity period")
 //                HStack {
 //                    Image(systemName: "calendar.day.timeline.right")
                 DatePicker(selection: MegaNFTAuctionBinding.time, in: Date()...) {
-                      Label("日期", systemImage: "clock.fill").foregroundColor(.blue)
+                      Label("Date", systemImage: "clock.fill").foregroundColor(.blue)
 //                      Text(selectedDate.formatted(date: .long, time: .omitted))
                     }
                     .padding()
@@ -86,7 +86,7 @@ struct MegaNFTAuctionView: View {
                     .cornerRadius(10)
                 if store.appState.NFTAuction.url != "" {
                     Text(store.appState.NFTAuction.url)
-                    Link("OpenSea资产页面", destination: URL(string: store.appState.NFTAuction.url)!)
+                    Link("OpenSea", destination: URL(string: store.appState.NFTAuction.url)!)
                 }
 //                }
 //                Image(systemName: "calendar.day.timeline.right")
@@ -96,10 +96,10 @@ struct MegaNFTAuctionView: View {
 //                    .cornerRadius(10)
             }
             .alert(isPresented: MegaNFTAuctionBinding.createFail) {
-                Alert(title: Text("出售失败"), message: Text("请检查服务或过一会再试"), dismissButton: .default(Text("OK")))
+                Alert(title: Text("Sell Fail"), message: Text("Please Try Again"), dismissButton: .default(Text("OK")))
             }
             .alert(isPresented: MegaNFTAuctionBinding.createSuccess) {
-                Alert(title: Text("出售成功"), message: Text(store.appState.NFTAuction.url), dismissButton:
+                Alert(title: Text("Sell Success"), message: Text(store.appState.NFTAuction.url), dismissButton:
                         Alert.Button.default(
                             Text("OK"), action: {
                                 self.store.dispatch(

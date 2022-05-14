@@ -13,6 +13,7 @@ struct walletManageView: View {
     let walletmanage = walletManage()
     @State private var walletShowMnemonics = false
     @State private var walletSelectedAddress = ""
+    @EnvironmentObject var web3Model: Web3Model
     var body: some View {
         VStack(alignment: .leading,spacing: 15) {
             VStack(alignment: .leading, spacing: 2) {
@@ -24,6 +25,7 @@ struct walletManageView: View {
                     print("Selected is: \(selected)")
                     walletSelectedAddress = selected
                     Defaults[.walletNowAddress] = selected
+                    web3Model.wallet?.update()
                 }.environmentObject(walletmanage)
             }
             Button {

@@ -8,15 +8,57 @@
 
 import SwiftUI
 import Defaults
+import web3swift
+import WalletConnectSwift
+import SheetKit
+import BigInt
 
 @available(iOS 14.0, *)
 struct NFTAssetView: View {
     @EnvironmentObject var web3Model: Web3Model
     @EnvironmentObject var store: Store
-    private var walletOptions = ["虚拟货币", "NFT", "挂单信息"]
+    private var walletOptions = ["Currency", "NFT", "Market"]
     @State private var selctedItem: Int = 0
     @State private var searchText: String = ""
+    @State private var showSend = false
+    @State private var walletAddress = ""
+    @State private var walletCount = ""
+    @State private var sendReturn = ""
+    @State private var showSendResponse = false
+    @MainActor
+    private func send() async{
+        let web3 = web3Model.wallet?.web3
+        let walletAddress = EthereumAddress(Defaults[.walletNowAddress])!
+        let balanceResult = try! web3!.eth.getBalance(address: walletAddress)
+        let balanceString = Web3.Utils.formatToEthereumUnits(balanceResult, toUnits: .eth, decimals: 3)!
+        let value: String = self.walletCount // In Ether
+        let toAddress = EthereumAddress(self.walletAddress)!
+        let contract = web3!.contract(Web3.Utils.coldWalletABI, at: toAddress, abiVersion: 2)!
+        let amount = Web3.Utils.parseToBigUInt(value, units: .eth)
+        var options = TransactionOptions.defaultOptions
+        options.value = amount
+        options.from = walletAddress
+        options.gasPrice = .automatic
+        options.gasLimit = .manual(BigUInt(21000))
+        let tx = contract.write(
+            "fallback",
+            parameters: [AnyObject](),
+            extraData: Data(),
+            transactionOptions: options)!
+        do{
+            let result = try await tx.send(password: "web3swift").transaction.hash!.toHexString()
+            self.sendReturn = result
+            self.showSendResponse = true
+            self.showSend = false
+            print(result)
+        }catch {
+            self.sendReturn = "Fail"
+            self.showSendResponse = true
+            self.showSend = true
+        }
+    }
     var body: some View {
+        ZStack(alignment: .top) {
         VStack {
             VStack {
                 MegaWalletRootViewSearch(searchText: $searchText)
@@ -25,6 +67,22 @@ struct NFTAssetView: View {
                 HStack {
                     Text("Address: ")
                     Text(web3Model.publicAddress.prefix(6))
+                    Text("Send")
+                        .onTapGesture {
+                            SheetKit().present(with: .bottomSheet) {
+                                VStack {
+                                    TextField("Enter Address", text: self.$walletAddress)
+                                        .modifier(textFieldModify())
+                                    TextField("Enter Count", text: self.$walletCount)
+                                        .modifier(textFieldModify())
+                                    Button {
+                                        self.showSend = true
+                                    } label: {
+                                        Text("Ok")
+                                    }
+                                }
+                            }
+                        }
                     Spacer()
                     Text("Balance: $\(web3Model.balanceFor(TokenType.ether) ?? "0")")
                         .padding()
@@ -50,7 +108,14 @@ struct NFTAssetView: View {
                 Spacer()
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            .alert(isPresented: self.$showSendResponse) {
+                Alert(title: Text("MegaWallet"), message: Text(self.sendReturn), dismissButton: .default(Text("OK")))
+            }
         }
+        HUD(text: "Sending")
+            .offset(y: self.showSend ? 0 : -100)
+            .animation(.easeInOut)
+    }
     }
 }
 
@@ -68,7 +133,7 @@ struct MegaWalletRootViewSearch: View {
             .frame(height: 30)
             .background(Color("E6E6E6"))
             .cornerRadius(40)
-            Text("取消")
+            Text("Cancle")
         }
     }
 }

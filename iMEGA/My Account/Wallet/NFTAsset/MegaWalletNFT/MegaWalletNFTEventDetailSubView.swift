@@ -40,7 +40,7 @@ struct MegaWalletNFTEventDetailSubestView: View {
     let date: String
     var body: some View {
         List {
-            Section(header: Text("事件类型")) {
+            Section(header: Text("Event Type")) {
 //                ForEach(0 ..< 1) {_ in
 //                    Text(eventType)
                 ZStack(alignment: .leading) {
@@ -52,7 +52,7 @@ struct MegaWalletNFTEventDetailSubestView: View {
                 }
 //                }
             }
-            Section(header: Text("价格(Eth)")) {
+            Section(header: Text("Price(Eth)")) {
                 if price == nil {
                     ZStack(alignment: .leading) {
                         RoundedRectangle(cornerRadius: 5)
@@ -71,7 +71,7 @@ struct MegaWalletNFTEventDetailSubestView: View {
                     }
                 }
             }
-            Section(header: Text("转出账户")) {
+            Section(header: Text("From Address")) {
                 if fromAccount == nil {
                     ZStack(alignment: .leading) {
                         RoundedRectangle(cornerRadius: 5)
@@ -90,7 +90,7 @@ struct MegaWalletNFTEventDetailSubestView: View {
                     }
                 }
             }
-            Section(header: Text("转入账户")) {
+            Section(header: Text("To Address")) {
                 if toAccount == nil {
                     ZStack(alignment: .leading) {
                         RoundedRectangle(cornerRadius: 5)
@@ -109,7 +109,7 @@ struct MegaWalletNFTEventDetailSubestView: View {
                     }
                 }
             }
-            Section(header: Text("日期")) {
+            Section(header: Text("Date")) {
                 ZStack(alignment: .leading) {
                     RoundedRectangle(cornerRadius: 5)
                         .fill(Color.white.opacity(1))

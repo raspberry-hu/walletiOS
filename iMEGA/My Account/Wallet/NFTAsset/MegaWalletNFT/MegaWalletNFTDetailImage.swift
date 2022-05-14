@@ -32,6 +32,9 @@ struct MegaWalletNFTDetailImage: View {
                             }
                         }
                     }
+                    .onLongPressGesture(minimumDuration: 0.2) {
+                        print("Press On")
+                    }
                 Text(test[i].NFTName)
                     .lineLimit(1)
                     .shadow(radius: 10)
@@ -52,6 +55,9 @@ struct MegaWalletNFTDetailImage: View {
                                     MegaWalletNFTDetailSheet(nftName: test[temp].NFTName, description: test[temp].description, image: test[temp].imageUrl, externalLink: test[temp].descriptionLink, inputArr: test[temp].set, mintNum: test[temp].number, walletAddress: test[temp].walletAddress, tokenId: String(test[temp].tokenID)).environmentObject(self.store).navigationBarTitleDisplayMode(.inline)
                                 }
                             }
+                        }
+                        .onLongPressGesture(minimumDuration: 0.2) {
+                            print("Press On")
                         }
                     Text(test[temp].NFTName)
                         .lineLimit(1)

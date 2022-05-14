@@ -7,16 +7,18 @@
 //
 
 import SwiftUI
+import Defaults
 
 struct MegaWalletOpenSeaRootView: View {
     @EnvironmentObject var store: Store
+    @State var NFTTemp = true
     @State var NFTAssetDeatilSell: [NFTGetAssetImageResponse]?
 //    @State var NFTAssetDeatilAuction: [NFTGetAssetImageResponse]?
 //    @State var NFTAssetDeatilBundle: [NFTGetAssetImageResponse]?
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            if NFTAssetDeatilSell != nil {
-                NavigationLink(destination: MegaNFTOpenSeaAssetEventView(NFTAsset: NFTAssetDeatilSell, sellTemp: 1).environmentObject(store).navigationBarTitleDisplayMode(.inline)) {
+            if store.appState.NFTAssetDetail.NFTAssetImage != nil {
+                NavigationLink(destination: MegaNFTOpenSeaAssetEventView(NFTAsset: store.appState.NFTAssetDetail.NFTAssetImage, sellTemp: 1).environmentObject(store).navigationBarTitleDisplayMode(.inline)) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 15)
                             .fill(Color.white.opacity(1))
@@ -26,7 +28,7 @@ struct MegaWalletOpenSeaRootView: View {
                             Image(systemName: "filemenu.and.selection")
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.black)
-                            Text("定价销售")
+                            Text("Fix Sell")
                                 .foregroundColor(.black)
                                 .padding()
                             Spacer()
@@ -36,7 +38,7 @@ struct MegaWalletOpenSeaRootView: View {
                         .frame(minWidth: 0, maxWidth: UIScreen.screenWidth - 40, minHeight: 0, maxHeight: 60)
                     }
                 }
-                NavigationLink(destination: MegaNFTOpenSeaAssetEventView(NFTAsset: NFTAssetDeatilSell, sellTemp: 2).environmentObject(store).navigationBarTitleDisplayMode(.inline)) {
+                NavigationLink(destination: MegaNFTOpenSeaAssetEventView(NFTAsset: store.appState.NFTAssetDetail.NFTAssetImage, sellTemp: 2).environmentObject(store).navigationBarTitleDisplayMode(.inline)) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 15)
                             .fill(Color.white.opacity(1))
@@ -46,7 +48,7 @@ struct MegaWalletOpenSeaRootView: View {
                             Image(systemName: "person.3")
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.black)
-                            Text("定价拍卖")
+                            Text("Auction Sell")
                                 .foregroundColor(.black)
                                 .padding()
                             Spacer()
@@ -56,7 +58,7 @@ struct MegaWalletOpenSeaRootView: View {
                         .frame(minWidth: 0, maxWidth: UIScreen.screenWidth - 40, minHeight: 0, maxHeight: 60)
                     }
                 }
-                NavigationLink(destination: MegaNFTOpenSeaAssetEventView(NFTAsset: NFTAssetDeatilSell, sellTemp: 3).environmentObject(store).navigationBarTitleDisplayMode(.inline)) {
+                NavigationLink(destination: MegaNFTOpenSeaAssetEventView(NFTAsset: store.appState.NFTAssetDetail.NFTAssetImage, sellTemp: 3).environmentObject(store).navigationBarTitleDisplayMode(.inline)) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 15)
                             .fill(Color.white.opacity(1))
@@ -66,7 +68,7 @@ struct MegaWalletOpenSeaRootView: View {
                             Image(systemName: "scribble")
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.black)
-                            Text("捆绑销售")
+                            Text("Bundle Sell")
                                 .foregroundColor(.black)
                                 .padding()
                             Spacer()
@@ -87,7 +89,7 @@ struct MegaWalletOpenSeaRootView: View {
                             Image(systemName: "filemenu.and.selection")
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.black)
-                            Text("定价销售")
+                            Text("Fix Sell")
                                 .foregroundColor(.black)
                                 .padding()
                             Spacer()
@@ -107,7 +109,7 @@ struct MegaWalletOpenSeaRootView: View {
                             Image(systemName: "person.3")
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.black)
-                            Text("定价拍卖")
+                            Text("Auction Sell")
                                 .foregroundColor(.black)
                                 .padding()
                             Spacer()
@@ -117,7 +119,7 @@ struct MegaWalletOpenSeaRootView: View {
                         .frame(minWidth: 0, maxWidth: UIScreen.screenWidth - 40, minHeight: 0, maxHeight: 60)
                     }
 //                }
-//                NavigationLink(destination: MegaNFTOpenSeaAssetView(NFTAsset: NFTAssetDeatilSell, sellTemp: 3)) {
+                NavigationLink(destination: MegaNFTOpenSeaAssetView(NFTAsset: NFTAssetDeatilSell, sellTemp: 3)) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 15)
                             .fill(Color.white.opacity(1))
@@ -127,7 +129,7 @@ struct MegaWalletOpenSeaRootView: View {
                             Image(systemName: "scribble")
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.black)
-                            Text("捆绑销售")
+                            Text("Bundle Sell")
                                 .foregroundColor(.black)
                                 .padding()
                             Spacer()
@@ -136,30 +138,34 @@ struct MegaWalletOpenSeaRootView: View {
                         }
                         .frame(minWidth: 0, maxWidth: UIScreen.screenWidth - 40, minHeight: 0, maxHeight: 60)
                     }
-//                }
+                }
             }
         }
         .onAppear {
 //            self.store.dispatch(
 //                .NFTAssetDetailGet(address: "0x6a22409c4e1df5fce2ec74a5b70d222723e83066", number: String(1))
 //            )
-//            self.NFTAssetDeatilSell = store.appState.NFTAssetDetail.NFTAssetImage
+//            self.store.NFTAssetDeatilSell = store.appState.NFTAssetDetail.NFTAssetImage
 //            self.store.dispatch(
 //                .NFTAssetDetailGet(address: "0x6a22409c4e1df5fce2ec74a5b70d222723e83066", number: String(2))
 //            )
-//            self.NFTAssetDeatilAuction = store.appState.NFTAssetDetail.NFTAssetImage
+//            self.store.NFTAssetDeatilAuction = store.appState.NFTAssetDetail.NFTAssetImage
 //            self.store.dispatch(
 //                .NFTAssetDetailGet(address: "0x6a22409c4e1df5fce2ec74a5b70d222723e83066", number: String(3))
 //            )
-//            self.NFTAssetDeatilBundle = store.appState.NFTAssetDetail.NFTAssetImage
+//            self.store.NFTAssetDeatilBundle = store.appState.NFTAssetDetail.NFTAssetImage
 //            self.store.dispatch(
 //                .NFTAssetGet(address: UserDefaults.standard.string(forKey: "walletNowAddress")!)
 //            )
             self.store.dispatch(
-                .NFTAssetGet(address: "0x6a22409c4e1df5fce2ec74a5b70d222723e83066")
+//                .NFTAssetGet(address: Defaults[.walletNowAddress])
+                .NFTAssetDetailGet(address: Defaults[.walletNowAddress], number: String(4))
             )
-            self.NFTAssetDeatilSell = store.appState.NFTAsset.NFTAssetImage
-            print("appear更新成功")
+            self.NFTAssetDeatilSell = store.appState.NFTAssetDetail.NFTAssetImage
+            print("Detailappear更新成功")
+            print(Defaults[.walletNowAddress])
+            print(self.NFTAssetDeatilSell)
+            print(store.appState.NFTAssetDetail.NFTAssetImage)
         }
     }
 }
